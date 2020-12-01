@@ -5,14 +5,31 @@ Page({
    * Page initial data
    */
   data: {
-
+    loggedIn: false
   },
-
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    // BONUS: we are getting options from the queries sent by the previous page (our post page)
+    console.log(options)
+    // getting the stories from our globalData (in app.js) and the loggedIn status from the post page
+    this.setData({
+      foods: [
+        {
+          name: "Milk",
+          status: "Expiring soon"
+        },
+        {
+          name: "Tomato paste",
+        },
+        {
+          name: "Nuts",
+        },
+        {
+          name: "Biscuits",
+        }
+      ] })
   },
 
   /**
@@ -24,8 +41,7 @@ Page({
 
   changeData: function () {
     this.setData({
-      title: "OOP",
-      content: "Orange Tree was tooouuuugh! But we loved it!"
+      name: "Milk"
     })
   },
 
