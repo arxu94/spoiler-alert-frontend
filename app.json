@@ -1,6 +1,15 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/fridge/fridge",
+    "pages/form/form",
+    "pages/home/home",
+    "pages/recipe/recipe",
+    "pages/recipes/recipes",
+    "pages/info/info",
+    "pages/scanner/scanner",
+    "pages/suggestions/suggestions"
   ],
   "window":{
     "backgroundTextStyle":"light",
