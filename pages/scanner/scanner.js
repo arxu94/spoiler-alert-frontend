@@ -8,6 +8,17 @@ Page({
 
   },
 
+  anything: function(){
+    wx.scanCode({
+      success (res) {
+        console.log(res.result)
+        const barcode = res.result
+        wx.request({
+          url: `https://mxnzp.com/api/barcode/goods/details?barcode=${barcode}app_id=zlcwkesmllkgvjbm&app_secret=NHlrMTd5c3JLYzU4M0dsTjl5YVp6UT09`,
+        })
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
