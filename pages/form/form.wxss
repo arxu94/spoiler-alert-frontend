@@ -1,1 +1,34 @@
 /* pages/form/form.wxss */
+.container {
+  background-color: #FFF2DF;
+  padding: 30rpx 80rpx;
+  align-items: left;
+}
+
+.h1 {
+  color: #333;
+  font-size: 80rpx;
+  font-weight: 600;
+  margin-bottom: 80rpx;
+  font-family: Helvetica, sans-serif;
+}
+
+.section__title {
+  font-size: 56rpx;
+  margin: 18rpx 0;
+}
+
+input {
+  margin-bottom: 70rpx;
+  height: 80rpx;
+  width: 580rpx;
+  background-color: #fff;
+  border: solid 3rpx #eaeaea;
+  border-radius: 15rpx;
+}
+
+.add-btn {
+  font-weight: 600;
+  color: #fff;
+  background-color: #F88B26;
+}
