@@ -22,6 +22,13 @@ Page({
 
   },
 
+  changeData: function () {
+    this.setData({
+      title: "OOP",
+      content: "Orange Tree was tooouuuugh! But we loved it!"
+    })
+  },
+
   /**
    * Lifecycle function--Called when page show
    */

@@ -1,2 +1,19 @@
 <!--pages/fridge/fridge.wxml-->
-<text>pages/fridge/fridge.wxml</text>
+<view class="h1">Welcome to your fridge</view>
+
+<view wx:key='index' wx:for="{{foods}}" wx:for-item="food">
+  <view class="container">
+    <view class="icon">
+      <view class="food-item">
+        <view class="h2">{{food.name}}</view>
+     
+      
+        
+        
+        
+        <view class="expiry p">Valid</view>
+      </view>
+    </view>
+  </view>
+  </view>
+  

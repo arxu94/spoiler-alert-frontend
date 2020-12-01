@@ -1,1 +1,14 @@
 /* pages/fridge/fridge.wxss */
+
+.body {
+  margin: 5px 10px 5px 10px;
+}
+.h1 {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: black;
+  text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
+  font-size: 60rpx;
+  font-weight: bold;
+
+}
