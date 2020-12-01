@@ -14,7 +14,11 @@ Page({
         console.log(res.result)
         const barcode = res.result
         wx.request({
-          url: `https://mxnzp.com/api/barcode/goods/details?barcode=${barcode}app_id=zlcwkesmllkgvjbm&app_secret=NHlrMTd5c3JLYzU4M0dsTjl5YVp6UT09`,
+          url: `https://mxnzp.com/api/barcode/goods/details?barcode=${barcode}&app_id=zlcwkesmllkgvjbm&app_secret=NHlrMTd5c3JLYzU4M0dsTjl5YVp6UT09`,
+          success(res){
+            console.log(res.data.data.goodsName)
+            const cn_item = res.data.data.goodsName
+          }
         })
       }
     })
