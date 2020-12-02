@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "Spoiler Alert",
+  "navigationBarTextStyle": "white"
 }
