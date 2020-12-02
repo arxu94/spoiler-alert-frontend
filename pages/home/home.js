@@ -8,6 +8,17 @@ Page({
 
   },
 
+  goToFridge: function() {
+    wx.navigateTo({
+      url: '/pages/fridge/fridge',
+    })
+  },
+
+  goToForm: function() {
+    wx.navigateTo({
+      url: '/pages/form/form',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
