@@ -1,2 +1,14 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- <text>pages/home/home.wxml</text> -->
+
+
+<view class="banner">
+  <view class="headers">
+  <view class="h1"> Welcome to Spoiler Alert.</view> 
+  <view class="h2"> What would you like to do?</view>
+  </view>
+    <view class="buttons">
+      <button class="one" style="padding: 60rpx;" bindtap="goToFridge">See all foods</button>
+      <button class="one" style="padding: 60rpx;" bindtap="goToForm">Add new foods</button>
+    </view>
+</view>

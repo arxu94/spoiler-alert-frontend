@@ -12,17 +12,19 @@ Page({
   formSubmit: function (e) {
     //...
     console.log('data', e)
+    let existingFood = getApp().globalData.foods
     let name = e.detail.value.name;
-    let purchase_date = e.detail.value.purchase_date;
+    let status = e.detail.value.purchase_date;
     let shelf_life = e.detail.value.shelf_life;
     
     let food = {
       name: name,
-      purchase_date: purchase_date,
+      status: status,
       shelf_life: shelf_life,
       user_id: getApp().globalData.userId
     }
-
+    existingFood.push(food)
+    console.log("checking again appid", existingFood)
     let currentFoods = this.data.foods;
     this.setData({
       foods: [...currentFoods, food]
@@ -35,7 +37,7 @@ Page({
       // data: { food: food },
       // success() {
         // redirect to index page when done
-        wx.reLaunch({
+        wx.navigateTo({
           url: '/pages/fridge/fridge'
         });
       // }
