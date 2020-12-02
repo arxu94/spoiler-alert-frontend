@@ -29,21 +29,20 @@ App({
     userInfo: null,
     foods: [
       {
-        name: "Milk",
-        status: "Expiring soon",
-        image: "https://tse1-mm.cn.bing.net/th/id/OIP.H5kIGXlqbaPOgs9KmXbKvAAAAA?pid=Api&w=300&h=240&rs=1",
+        name: "Canned Beans",
+        shelf_life: "6 months",
       },
       {
         name: "Tomato paste",
-        image: "https://tse1-mm.cn.bing.net/th/id/OIP.Xm-VpMwM2n7uCOkSh74FTQHaFU?pid=Api&rs=1",
+        shelf_life: "6 months",
       },
       {
         name: "Nuts",
-        image: "http://www.trbimg.com/img-5364238e/turbine/la-dd-is-hazelnut-milk-the-new-almond-milk-20140416",
+        shelf_life: "6 months",
       },
       {
         name: "Biscuits",
-        image: "https://tse3-mm.cn.bing.net/th/id/OIP.tCni9i-9u08VYudGXtRaGgAAAA?pid=Api&w=250&h=250&rs=1",
+        shelf_life: "6 months",
       }
     ],
     }
