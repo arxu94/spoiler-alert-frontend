@@ -46,8 +46,17 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
 
+  //  make route in rails for all tags, call API to get these tags
+  onLoad: function (options) {
+    wx.request({
+      url: getApp().globalData.host + `/api/v1/taglist`,
+      success: function(response) {
+        const tags = response.data
+        console.log(tags)
+        // page.setData({ tags })
+      }
+    })
   },
 
   /**
