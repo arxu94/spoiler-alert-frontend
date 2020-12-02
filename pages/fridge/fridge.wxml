@@ -2,11 +2,11 @@
 <view class="h1">Welcome to your fridge</view>
 
 <view wx:key='index' wx:for="{{foods}}" wx:for-item="food">
-  <view class="box">
-    <image class='icon' src="/images/food.png"/>
-      <view class="food-item">
+  <view class="card-food">
+    <image class='banner' src="{{food.image}}" />
+      <view class="food-item-name">{{food.name}}</view>
       
-        <view class="h2">{{food.name}}</view>
+        <!-- <view class="h2">{{food.name}}</view> -->
         <view class="status">{{food.status}}</view>
 
      
@@ -15,8 +15,7 @@
         
         
         
-      </view>
+     
     </view>
   </view>
-  
   
