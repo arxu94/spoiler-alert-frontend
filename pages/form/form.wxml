@@ -9,6 +9,8 @@
     <view class="section">
       <view class="section__title">Item</view>
       <input name="name" value="{{name}}" placeholder="" />
+      <!-- change to the picker component  -->
+      <input name="name" value="{{tag_list}}" placeholder="" />
       <view class="section__title">Purchase date</view>
       <input name="purchase_date" value="{{purchase_date}}" placeholder="" />
       <view class="section__title">Shelf life</view>
