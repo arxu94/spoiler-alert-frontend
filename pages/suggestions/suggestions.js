@@ -1,38 +1,27 @@
 // pages/suggestions/suggestions.js
+const app = getApp()
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    //滑动获取选中商品
-
-  getSelectItem:function(e){
-
-    let that = this;
-
-    let itemWidth = e.detail.scrollWidth / that.data.food.length;//每个商品的宽度
-
-    let scrollLeft = e.detail.scrollLeft;//滚动宽度
-
-    let curIndex = Math.round(scrollLeft / itemWidth);//通过Math.round方法对滚动大于一半的位置进行进位
-
-    for (let i = 0, len = that.data.food.length; i < len; ++i) {
-
-        that.data.proList[i].selected = false;
-
-    }
-
-    that.data.proList[curIndex].selected = true;
-
-    that.setData({
-
-        foods: getApp().globalData.foods
-
-        // giftNo: this.data.food[curIndex].id
-
-    });
-  }
+    array: [{title: "ok", name: "irene", price: 1,  url: "https://adogp.oss-cn-shanghai.aliyuncs.com/55utlm07w2ssp0442qomxo1ltyzd"},{title: "ok", name: "irene", price: 1, },{title: "ok", name: "irene", price: 1, url: "https://adogp.oss-cn-shanghai.aliyuncs.com/55utlm07w2ssp0442qomxo1ltyzd"}]
+  },
+    getSelectItem:function(e){
+      var that = this;
+      var itemWidth = e.detail.scrollWidth / that.data.array.length;//每个商品的宽度
+      var scrollLeft = e.detail.scrollLeft;//滚动宽度
+      var curIndex = Math.round(scrollLeft / itemWidth);//通过Math.round方法对滚动大于一半的位置进行进位
+      for (var i = 0, len = that.data.array.length; i < len; ++i) {
+          that.data.array[i].selected = false;
+      }
+      that.data.array[curIndex].selected = true;
+      that.setData({
+          array: that.data.array,
+          giftNo: this.data.array[curIndex].id
+      });
   },
 
   /**

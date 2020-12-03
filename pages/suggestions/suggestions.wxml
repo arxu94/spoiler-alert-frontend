@@ -1,14 +1,14 @@
 <!--pages/suggestions/suggestions.wxml-->
-<scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;height:{{windowHeight}}px" bindscroll="getSelectItem">
-      <block wx:for="{{foods}}"  wx:key="unique" wx:for-index="id" wx:for-item="food">
-       <view class="scroll_item {{item.selected ? 'selected' : ''}}" data-index='{{item.index}}' bindtap='selectProItem'>
-        <!-- <view class='proImg'><image src="{{item.proUrl}}" class="slide-image"  mode="widthFix"/></view> -->
-         <view class='detailBox'>
-             <view class='proTitle'>{{food.name}}</view>
-              <view class='proDec'>{{food.shelf_life}}</view>
-             <!-- <view class='proPrice'>￥{{item.proPrice}}</view> -->
-             <navigator class='detailLink'  url="../detail/detail?id={{item.id}}">查看详情 ></navigator>
-        </view>
-       </view>
-    </block>
-   </scroll-view>
+<scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;height:100vh" bindscroll="getSelectItem">
+  <block wx:for="{{array}}"  wx:key="unique" wx:for-index="id" wx:for-item="item">
+    <view class="scroll_item {{item.selected ? 'selected' : ''}}" data-index='{{item.index}}' bindtap='selectProItem'>
+      <view class='proImg'><image src="{{item.url}}" class="slide-image"  mode="widthFix"/></view>
+      <view class='detailBox'>
+      <view class='proTitle'>{{item.title}}</view>
+      <view class='proDec'>{{item.name}}</view>
+      <view class='proPrice'>￥{{item.price}}</view>
+        <navigator class='detailLink'  url="../detail/detail?id={{item.id}}">查看详情 ></navigator>
+      </view>
+    </view>
+  </block>
+</scroll-view>
