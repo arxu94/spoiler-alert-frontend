@@ -34,7 +34,7 @@ vertical-align: top;
 
 top: 5%;
 
-height: 93%;
+height: 70%;
 
 background-color: #fff;
 
@@ -60,7 +60,7 @@ background-color: #fff;
 
    transform: scale(1);
    box-shadow: 0 0 5rpx #ED984A;
-   border: solid 1px #ED984A;
+   border: solid 5px #ED984A;
 
 }
 
@@ -164,7 +164,7 @@ background-color: #fff;
 
 .detailLink{
   
-  color: #666;
+  color: #ED984A;
 
   font-size: 30rpx;
 

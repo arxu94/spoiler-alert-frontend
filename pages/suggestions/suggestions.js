@@ -7,7 +7,7 @@ Page({
    * Page initial data
    */
   data: {
-    array: [{title: "Chocolate Cakedsdsdsdssdsdsdsd", url: "https://tse3-mm.cn.bing.net/th/id/OIP.1L8gCwTABU3YDcOx_aIy8gHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"},{title: "Three Beans Salad", url: "https://tse2-mm.cn.bing.net/th/id/OIP.YnxA6KjU-UiVknSmPFYcQQHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"},{title: "Three Beans Salad", url: "https://tse2-mm.cn.bing.net/th/id/OIP.YnxA6KjU-UiVknSmPFYcQQHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"}]
+    // array: [{title: "Chocolate Cakedsdsdsdssdsdsdsd", url: "https://tse3-mm.cn.bing.net/th/id/OIP.1L8gCwTABU3YDcOx_aIy8gHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"},{title: "Three Beans Salad", url: "https://tse2-mm.cn.bing.net/th/id/OIP.YnxA6KjU-UiVknSmPFYcQQHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"},{title: "Three Beans Salad", url: "https://tse2-mm.cn.bing.net/th/id/OIP.YnxA6KjU-UiVknSmPFYcQQHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"}]
   },
     getSelectItem:function(e){
       var that = this;
@@ -33,14 +33,15 @@ Page({
 
     // Get api data
     wx.request({
-      // url: "http://localhost:3000/api/v1/stories",
+      url: "http://localhost:3000/api/v1/find_recipes?search=food.name",
       method: 'GET',
       success(res) {
-        const stories = res.data.stories;
+        console.log(res.data.result)
+        const recipes = res.data.result;
 
         // Update local data
         page.setData({
-          stories: stories
+          recipes: recipes
         });
 
         wx.hideToast();
