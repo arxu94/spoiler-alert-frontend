@@ -67,9 +67,31 @@ changeBoolean: function(event){
 },
 
 createRecipe: function(event) {
-  const item = this.data.foods.filter(element => element.status === true)
-  console.log(item)
+  const items = this.data.foods.filter(element => element.status === true)
+  let query = "?search="
+  if (items.length === 1) {
+    query += `${items.name},`
+  } else {
+    // items.forEach((item) => {
+    // })
+    // query += `+${item.name},`
+    for (let index = 0; index < items.length; index++) {
+      const item = items[index];
+      console.log(item)
+      query += `+${item.name},`
+    }
+  }
+  wx.request({
+    url: getApp().globalData.host + `api/v1/find_recipes${query}`,
+    success: function (response) {
+       console.log('123',response)
+        const recipes = response.data.result
+        console.log(recipes)
+        // page.setData({ coupons })
+      }
+  })
   console.log(event)
+  console.log(query)
 },
 
   /**
