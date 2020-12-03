@@ -1,4 +1,9 @@
 /* pages/form/form.wxss */
+.picker{
+  padding: 13px;
+  background-color: #FFFFFF;
+}
+
 .container {
   background-color: #FFF2DF;
   padding: 30rpx 80rpx;

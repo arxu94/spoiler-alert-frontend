@@ -12,7 +12,11 @@
       <!-- change to the picker component for tags -->
       <view class="section__title">Category</view>
       <view wx:for="{{tags}}" wx:for-item="tag"></view>
-      <input name="name" value="{{tag[0].name}}" placeholder="" />
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+          Your item：{{array[index]}}
+        </view>
+        </picker>
 
       <view class="section__title">Purchase date</view>
       <input name="purchase_date" value="{{purchase_date}}" placeholder="" />

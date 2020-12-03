@@ -5,7 +5,44 @@ Page({
    * Page initial data
    */
   data: {
-    foods: []
+    array: ['Meat and Fish', 'Dairy', 'Fruits and Veggies', 'Condiments', 'Eggs', 'Others'],
+    selectedFoodIndex: 0,
+    objectArray: [
+      {
+        id: 0,
+        name: 'Meat and Fish'
+      },
+      {
+        id: 1,
+        name: 'Dairy'
+      },
+      {
+        id: 2,
+        name: 'Fruits and Veggies'
+      },
+      {
+        id: 3,
+        name: 'Condiments'
+      },
+      {
+        id: 4,
+        name: 'Eggs'
+      },
+      {
+        id: 5,
+        name: 'Others'
+      }
+    ],
+  },
+  bindPickerChange: function (e) {
+    console.log('picker has been used, the choice is', e)
+    let index = e.detail.value
+    console.log(this.data.array[index])
+
+    this.setData({
+      index: index,
+      foodItemName: this.data.array[index]
+    })
   },
 
   // New Coupon Submission
