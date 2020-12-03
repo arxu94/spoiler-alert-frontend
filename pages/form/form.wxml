@@ -3,7 +3,7 @@
     t.datetime "purchase_date"
     t.string "shelf_life"-->
 
-<form bindsubmit="formSubmit">
+<form bindsubmit="submit">
   <view class="container">
     <view class ="h1">Add new item</view>
     <view class="section">
@@ -19,7 +19,7 @@
         </picker>
 
       <view class="section__title">Purchase date</view>
-      <input name="purchase_date" value="{{purchase_date}}" placeholder="" />
+      <input name="purchase_date" value="{{purchase_date}}" placeholder="Date/Month/Year" />
       <button form-type="submit" class='add-btn'>Put in fridge!</button>
     </view>
   </view>

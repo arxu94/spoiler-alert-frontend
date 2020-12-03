@@ -27,24 +27,24 @@ App({
    host: 'http://localhost:3000/',
     // ## place holder for dooku server ##
     userInfo: null,
-    // foods: [
-    //   {
-    //     name: "Canned Beans",
-    //     shelf_life: "6 months",
-    //   },
-    //   {
-    //     name: "Tomato paste",
-    //     shelf_life: "6 months",
-    //   },
-    //   {
-    //     name: "Nuts",
-    //     shelf_life: "6 months",
-    //   },
-    //   {
-    //     name: "Biscuits",
-    //     shelf_life: "6 months",
-    //   }
-    // ],
+    foods: [
+      // {
+      //   name: "Canned Beans",
+      //   shelf_life: "6 months",
+      // },
+      // {
+      //   name: "Tomato paste",
+      //   shelf_life: "6 months",
+      // },
+      // {
+      //   name: "Nuts",
+      //   shelf_life: "6 months",
+      // },
+      // {
+      //   name: "Biscuits",
+      //   shelf_life: "6 months",
+      // }
+    ],
     }
   
 })
