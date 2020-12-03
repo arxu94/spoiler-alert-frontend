@@ -12,9 +12,10 @@ Page({
    */
   onLoad: function (options) {
     // BONUS: we are getting options from the queries sent by the previous page (our post page)
-    console.log(options)
-    // getting the stories from our globalData (in app.js) and the loggedIn status from the post page
-    this.setData({ foods: getApp().globalData.foods})
+    // console.log(options)
+    // // getting the stories from our globalData (in app.js) and the loggedIn status from the post page
+    // this.setData({ foods: getApp().globalData.foods})
+    
       // foods: [
       //   {
       //     name: "Milk",
@@ -44,8 +45,16 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
-  },
+    const page = this
+    wx.request({
+      url: getApp().globalData.host + `/api/v1/foods`,
+      success: function (response) {
+        console.log(response.data[0])
+        const foods = response.data
+        page.setData({ foods })
+      }
+  })
+},
 
   /**
    * Lifecycle function--Called when page hide

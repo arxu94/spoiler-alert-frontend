@@ -74,9 +74,9 @@ Page({
       success(res) {
         console.log(res)
         // redirect to index page when done
-        // wx.navigateTo({
-        //   url: '/pages/fridge/fridge'
-        // })
+        wx.navigateTo({
+          url: '/pages/fridge/fridge'
+        })
       }
     })
   },
