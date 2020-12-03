@@ -34,7 +34,7 @@ vertical-align: top;
 
 top: 5%;
 
-height: 72%;
+height: 93%;
 
 background-color: #fff;
 
@@ -59,8 +59,8 @@ background-color: #fff;
 .scroll_item.selected{
 
    transform: scale(1);
-
-   border: solid 1px #ffcd54;
+   box-shadow: 0 0 5rpx #ED984A;
+   border: solid 1px #ED984A;
 
 }
 
@@ -98,12 +98,12 @@ background-color: #fff;
 
 .detailBox {
 
-  padding: 30rpx 5% 30rpx 5%;
+  padding: 10rpx 5% 30rpx 5%;
 
   float: left;
 
   width: 90%;
-
+  height: 20%;
   border-bottom-left-radius: 20rpx;
 
   border-bottom-right-radius: 20rpx;
@@ -117,22 +117,28 @@ background-color: #fff;
   z-index: 1;
 
   background: #fff;
+  word-wrap: break-word; 
 
 }
 
 .proTitle {
-
-  font-size: 36rpx;
-
+  padding-top: 10px;
+  font-size: 45rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #666;
 
-  line-height: 50rpx;
 
-  overflow: hidden;
+  line-height: 80rpx;
 
-  text-overflow: ellipsis;
+  /* overflow: hidden; */
 
-  white-space: nowrap;
+  /* text-overflow: ellipsis; */
+  /* word-wrap: break-word; */
+  width: auto;
+  /* display: inline-block;
+  white-space: nowrap; */
 
 }
 
@@ -146,7 +152,7 @@ background-color: #fff;
 
 }
 
-.proPrice {
+/* .proPrice {
 
   font-size: 48rpx;
 
@@ -154,12 +160,37 @@ background-color: #fff;
 
   line-height: 90rpx;
 
-}
+} */
 
 .detailLink{
-
+  
   color: #666;
 
   font-size: 30rpx;
 
+}
+
+.h1 {
+color: #333;
+text-align: center;
+margin-top: 10px;
+font-size: 20px;
+font-weight: bold;
+width: 95%;
+text-align: center;
+}
+
+.selected-food-items {
+  display: flex;
+  height: auto;
+  background-color: #ED984A;
+  margin: 10px 5px 10px 5px;
+  border-radius: 2px;
+
+}
+
+.header-items-selected {
+  margin: 10px 5px 10px 5px;
+  color: #666;
+  font-size: 30rpx;
 }

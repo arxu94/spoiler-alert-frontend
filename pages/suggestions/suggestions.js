@@ -7,7 +7,7 @@ Page({
    * Page initial data
    */
   data: {
-    array: [{title: "ok", name: "irene", price: 1,  url: "https://adogp.oss-cn-shanghai.aliyuncs.com/55utlm07w2ssp0442qomxo1ltyzd"},{title: "ok", name: "irene", price: 1, },{title: "ok", name: "irene", price: 1, url: "https://adogp.oss-cn-shanghai.aliyuncs.com/55utlm07w2ssp0442qomxo1ltyzd"}]
+    array: [{title: "Chocolate Cakedsdsdsdssdsdsdsd", url: "https://tse3-mm.cn.bing.net/th/id/OIP.1L8gCwTABU3YDcOx_aIy8gHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"},{title: "Three Beans Salad", url: "https://tse2-mm.cn.bing.net/th/id/OIP.YnxA6KjU-UiVknSmPFYcQQHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"},{title: "Three Beans Salad", url: "https://tse2-mm.cn.bing.net/th/id/OIP.YnxA6KjU-UiVknSmPFYcQQHaLH?w=200&h=300&c=7&o=5&dpr=1.5&pid=1.7"}]
   },
     getSelectItem:function(e){
       var that = this;
@@ -28,7 +28,24 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let page = this;
+	
 
+    // Get api data
+    wx.request({
+      // url: "http://localhost:3000/api/v1/stories",
+      method: 'GET',
+      success(res) {
+        const stories = res.data.stories;
+
+        // Update local data
+        page.setData({
+          stories: stories
+        });
+
+        wx.hideToast();
+      }
+    });
   },
 
   /**
