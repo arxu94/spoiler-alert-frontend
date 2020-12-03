@@ -87,6 +87,7 @@ createRecipe: function(event) {
        console.log('123',response)
         const recipes = response.data.result
         console.log(recipes)
+        // add the response to global data
         // page.setData({ coupons })
       }
   })
