@@ -5,7 +5,7 @@
   <view class="card-food">
     <image class='banner' src="/images/food.png" />
       <view class="food-item-name">{{food.name}}
-      <view class="shelf-life">Shelf life: {{food.shelf_life}}</view>
+      <view class="shelf-life">Expiry Date: {{food.expire_date}}</view>
     </view>
     </view>
   </view>
