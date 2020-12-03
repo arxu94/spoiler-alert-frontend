@@ -49,12 +49,13 @@ Page({
 
   //  make route in rails for all tags, call API to get these tags
   onLoad: function (options) {
+    const page = this
     wx.request({
       url: getApp().globalData.host + `/api/v1/taglist`,
       success: function(response) {
+        // console.log(response.data[0].name)
         const tags = response.data
-        console.log(tags)
-        // page.setData({ tags })
+        page.setData({ tags })
       }
     })
   },

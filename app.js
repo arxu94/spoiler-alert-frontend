@@ -24,7 +24,7 @@ App({
     })
   },
   globalData: {
-   // host: 'http://localhost:3000/',
+   host: 'http://localhost:3000/',
     // ## place holder for dooku server ##
     userInfo: null,
     foods: [
