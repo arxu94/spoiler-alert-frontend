@@ -3,16 +3,23 @@
     t.datetime "purchase_date"
     t.string "shelf_life"-->
 
-<form bindsubmit="formSubmit">
+<form bindsubmit="submit">
   <view class="container">
     <view class ="h1">Add new item</view>
     <view class="section">
       <view class="section__title">Item</view>
       <input name="name" value="{{name}}" placeholder="" />
+      <!-- change to the picker component for tags -->
+      <view class="section__title">Category</view>
+      <view wx:for="{{tags}}" wx:for-item="tag"></view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+          Your item：{{array[index]}}
+        </view>
+        </picker>
+
       <view class="section__title">Purchase date</view>
-      <input name="purchase_date" value="{{purchase_date}}" placeholder="" />
-      <view class="section__title">Shelf life</view>
-      <input name="shelf_life" value="{{shelf_life}}" placeholder="" />
+      <input name="purchase_date" value="{{purchase_date}}" placeholder="Date/Month/Year" />
       <button form-type="submit" class='add-btn'>Put in fridge!</button>
     </view>
   </view>
