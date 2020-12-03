@@ -55,6 +55,22 @@ Page({
       }
   })
 },
+changeBoolean: function(event){
+  console.log(event)
+  const id = event.currentTarget.dataset.id
+  const foods = this.data.foods
+  const food = foods.find(element => element.id === id)
+  food.status = !food.status
+  this.setData({foods: foods})
+  console.log(food)
+  // console.log(food)
+},
+
+createRecipe: function(event) {
+  const item = this.data.foods.filter(element => element.status === true)
+  console.log(item)
+  console.log(event)
+},
 
   /**
    * Lifecycle function--Called when page hide

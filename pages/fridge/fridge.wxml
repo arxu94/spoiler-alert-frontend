@@ -6,8 +6,11 @@
     <image class='banner' src="/images/food.png" />
       <view class="food-item-name">{{food.name}}
       <view class="shelf-life">Expiry Date: {{food.expire_date}}</view>
+      <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✅" : "❎"}}</view>
     </view>
     </view>
   </view>
+
+  <button bindtap="createRecipe">Cooking Assistant On!</button>
   
   
