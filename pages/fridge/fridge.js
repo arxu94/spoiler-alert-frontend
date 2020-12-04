@@ -77,18 +77,21 @@ createRecipe: function(event) {
     // query += `+${item.name},`
     for (let index = 0; index < items.length; index++) {
       const item = items[index];
-      console.log(item)
+      // console.log(item)
       query += `+${item.name},`
     }
   }
   wx.request({
     url: getApp().globalData.host + `api/v1/find_recipes${query}`,
     success: function (response) {
-       console.log('123',response)
-        const recipes = response.data.result
-        console.log(recipes)
+      //  console.log('123',response)
+        const results = response.data.result
+        console.log(results)
+        let recipe = getApp().globalData.recipes
+        console.log(recipe)
         // add the response to global data
-        // page.setData({ coupons })
+        getApp().globalData.recipes = results
+        console.log(getApp().globalData)
       }
   })
   console.log(event)

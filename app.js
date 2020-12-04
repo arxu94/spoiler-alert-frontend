@@ -25,8 +25,11 @@ App({
   },
   globalData: {
    host: 'http://localhost:3000/',
+  //  host : 'http://spoiler-alert.dooku.com'
     // ## place holder for dooku server ##
     userInfo: null,
+    recipes: [
+    ],
     foods: [
       // {
       //   name: "Canned Beans",
