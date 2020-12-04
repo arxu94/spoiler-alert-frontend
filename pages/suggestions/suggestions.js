@@ -31,9 +31,9 @@ Page({
   onLoad: function (options) {
     // let page = this;
     
-    this.setData({
-      ingredients: globalData.foods
-    })
+    // this.setData({
+    //   ingredients: globalData.foods
+    // })
     // // Get api data
     // wx.request({
     //   url: getApp().globalData.host + `http://localhost:3000/api/v1/find_recipes?/${recipes}`,
@@ -67,10 +67,9 @@ Page({
     // const id = getApp().globalData.userId
     const recipes = getApp().globalData.recipes
     this.setData({recipes})
-
-    
-    
-
+    this.setData({
+      ingredients: globalData.foods
+    })
     // wx.request({
     //   url: getApp().globalData.recipes,
     //   success: function(response) {

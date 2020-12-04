@@ -12,7 +12,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({id: options.id})
   },
 
   /**
@@ -26,7 +26,17 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    const page = this
+    const id = this.data.id
+    console.log(page.data)
+    wx.request({
+      url: getApp().globalData.host + `api/v1/recipe_details?id=${page.data.id}`,
+      success: function(res) {
+        const recipe = res.data.result
+        console.log(recipe)
+        page.setData(recipe)
+      }
+    })
   },
 
   /**
