@@ -24,8 +24,8 @@ App({
     })
   },
   globalData: {
-   host: 'http://localhost:3000/',
-  //  host : 'http://spoiler-alert.dooku.com'
+  //  host: 'http://localhost:3000/',
+   host : 'https://spoiler-alert.wogengapp.cn',
     // ## place holder for dooku server ##
     userInfo: null,
     recipes: [
