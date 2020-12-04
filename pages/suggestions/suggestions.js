@@ -33,7 +33,7 @@ Page({
 
     // Get api data
     wx.request({
-      url: "http://localhost:3000/api/v1/find_recipes?search=food.name",
+      url: "http://localhost:3000/api/v1/find_recipes?search=food",
       method: 'GET',
       success(res) {
         console.log(res.data.result)
