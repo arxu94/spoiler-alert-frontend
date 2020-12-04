@@ -1,16 +1,22 @@
 <!--pages/fridge/fridge.wxml-->
-<view class="h1">Welcome to your fridge</view>
+<view class="h1">Here's what's in your fridge</view>
+
+<view class="body">
 
 <view wx:key='index' wx:for="{{foods}}" wx:for-item="food">
   <view class="card-food">
-    <image class='banner' src="/images/food.png" />
-      <view class="food-item-name">{{food.name}}
-      <view class="shelf-life">Expiry Date: {{food.expire_date}}</view>
-      <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✅" : "❎"}}</view>
+    <image class='icon' src="/images/food.png" />
+    <view class="foodinfo">
+      <view class="text">
+        <view class="food-item-name">{{food.name}}</view>
+        <view class="shelf-life">Expiry Date: {{food.expire_date}}</view>
+      </view>
     </view>
-    </view>
+    <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✅" : "❎"}}</view>
   </view>
+</view>
 
-  <button bindtap="createRecipe">Cooking Assistant On!</button>
-  
+  <button class="generate" bindtap="createRecipe">Turn on Cooking Assistant</button>
+
+</view>
   
