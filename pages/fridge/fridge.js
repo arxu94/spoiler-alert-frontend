@@ -10,6 +10,12 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+  goToForm: function () {
+    wx.navigateTo({
+      url: '/pages/form/form',
+    })
+  },
+
   onLoad: function (options) {
     // BONUS: we are getting options from the queries sent by the previous page (our post page)
     // console.log(options)

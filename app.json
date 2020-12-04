@@ -12,8 +12,8 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#FFF1E8",
+    "navigationBarTitleText": "Spoiler Alert",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
