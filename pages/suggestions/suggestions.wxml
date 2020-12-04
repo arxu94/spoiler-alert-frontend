@@ -14,9 +14,9 @@
   </block>
 </scroll-view>
 
-<!-- <view class="header-items-selected">Foods you have selected:</view>
-<view wx:key='index' wx:for="{{foods}}" wx:for-item="food">
+<view class="header-items-selected">Foods you have selected:</view>
+<view wx:key='index' wx:for= "{{ingredients}}" wx:for-item="food">
     <view class="header-items-selected">
-      <view class='selected-food-items'>"{{food.name}}bjbbiuhiuhihjknj, bjbbiuhiuhihjknj"</view>
+      <view class='selected-food-items'>{{food}}</view>
     </view>
-  </view> -->
+  </view>
