@@ -1,2 +1,9 @@
 <!--pages/recipe/recipe.wxml-->
 <text>pages/recipe/recipe.wxml</text>
+
+<view class ="h1">Recipe Details for {{title}}</view>
+<view class ="h2">Ready in: {{readyInMinutes}} minutes</view>
+<view class ="h2">Servings: {{servings}} pax</view>
+
+
+<button bindtap="saverecipe" class='button-save-recipe' data-id="{{id}}">Save this recipe</button>
