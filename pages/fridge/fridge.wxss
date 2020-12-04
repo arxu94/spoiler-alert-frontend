@@ -2,15 +2,68 @@
 
 page {
   background-color: #FFF1E8;
+  box-sizing: border-box;
 }
 
 .h1 {
-color: #333;
-text-align: center;
- margin: 20px;
- font-size: 20px;
- font-weight: bold;
- /* margin-bottom: 20px; */
+  /* padding: 0 32rpx; */
+  width: 100%;
+  height: 120rpx;
+  /* text-align: center; */
+  margin: 20px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 45rpx;
+  text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
+  /* color: black; */
+}
+/*     padding: 0 32rpx;
+    width: 100%;
+    height: 120rpx;
+    font-weight: bold;
+    font-size: 45rpx;
+    text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: #FFF1E8; */
+/* .header {
+  margin: 30rpx;
+} */
+
+.header > .h1 {
+  margin-left: 60rpx;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: #FFF1E8;
+  flex-wrap: wrap;
+}
+
+.btn-to-form {
+  margin-left: auto;
+  margin-right: 35rpx;
+  padding: 10rpx;
+  font-weight: 500;
+  width: 255rpx;
+  border: solid 4rpx #f8983e;
+  box-shadow: 0 0 8rpx rgba(0,0,0,0.3);
+  border-radius: 10rpx;
+  color: rgb(241, 241, 241);
+  background-color: #F88B26;
+  
+}
+
+.body{
+  margin-top: 50rpx;
+  padding: 0 32rpx;
+
 }
 
 .card-food {
@@ -20,25 +73,34 @@ text-align: center;
   background:#FFFFFF;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   display: flex;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 10px;
   padding: 5px;
   /* padding-top: 10px; */
-  margin-left: 10px;
-  margin-right: 10px;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
   margin-bottom: 10px;
 }
 
-.food-item-name {
-  margin-left: 2px;
-  margin-top: 30px;
-  font-size: 15px;
-  font-weight: bold;
-  
+.food-info {
+  width: 300rpx;
+  margin-right: auto;
+  /* justify-content: space-between; */
+  /* flex-direction: row; */
 }
 
-.banner {
-  
+.toggle {
+  font-size: 75rpx;
+  margin-right: 30rpx;
+}
+
+.food-item-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.icon {
   height: 100%;
   width: 80px;
   object-fit: cover;
@@ -47,5 +109,18 @@ text-align: center;
 .shelf-life {
   font-size: 10px;
   color: gray;
-  margin-left: 110px;
 }
+
+.generate {
+  width: auto;
+  margin-top: 40rpx;
+  margin-bottom: 80rpx;
+  background-color: #F88B26;
+  color: rgb(241, 241, 241);
+}
+
+/* .text {
+  align-self: flex-start;
+  padding: 12rpx;
+   width: 200rpx; 
+} */
