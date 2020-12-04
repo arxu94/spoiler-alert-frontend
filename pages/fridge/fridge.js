@@ -55,6 +55,48 @@ Page({
       }
   })
 },
+changeBoolean: function(event){
+  console.log(event)
+  const id = event.currentTarget.dataset.id
+  const foods = this.data.foods
+  const food = foods.find(element => element.id === id)
+  food.status = !food.status
+  this.setData({foods: foods})
+  console.log(food)
+  // console.log(food)
+},
+
+createRecipe: function(event) {
+  const items = this.data.foods.filter(element => element.status === true)
+  let query = "?search="
+  if (items.length === 1) {
+    query += `${items.name},`
+  } else {
+    // items.forEach((item) => {
+    // })
+    // query += `+${item.name},`
+    for (let index = 0; index < items.length; index++) {
+      const item = items[index];
+      // console.log(item)
+      query += `+${item.name},`
+    }
+  }
+  wx.request({
+    url: getApp().globalData.host + `api/v1/find_recipes${query}`,
+    success: function (response) {
+      //  console.log('123',response)
+        const results = response.data.result
+        console.log(results)
+        let recipe = getApp().globalData.recipes
+        console.log(recipe)
+        // add the response to global data
+        getApp().globalData.recipes = results
+        console.log(getApp().globalData)
+      }
+  })
+  console.log(event)
+  console.log(query)
+},
 
   /**
    * Lifecycle function--Called when page hide
