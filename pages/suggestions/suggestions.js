@@ -117,5 +117,13 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  goToRecipe: function (event) {
+    const id = event.currentTarget.dataset.id
+    console.log(id)
+    wx.navigateTo({
+      url: `/pages/recipe/recipe?id=${id}`,
+    })
+  },
 })

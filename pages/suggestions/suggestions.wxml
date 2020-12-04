@@ -8,15 +8,17 @@
       <view class='detailBox'>
       <view class='proTitle'>{{item.title}}</view>
       <!-- <view class='proDec'>{{item.name}}</view> -->
-        <navigator class='detailLink'  url="../recipe/recipe?id={{item.id}}">Read the instructions ></navigator>
+        <navigator bindtap="goToRecipe" class='detailLink'  data-id="{{item.id}}">Read the instructions ></navigator>
       </view>
     </view>
   </block>
 </scroll-view>
 
-<view class="header-items-selected">Foods you have selected:</view>
+<view class="ingredients-list">
+<view class="header-ingredients-selected">Ingredients you have selected:</view>
 <view wx:key='index' wx:for= "{{ingredients}}" wx:for-item="food">
     <view class="header-items-selected">
-      <view class='selected-food-items'>{{food}}</view>
+      <view class='selected-ingredients'>-{{food}}</view>
     </view>
   </view>
+</view>
