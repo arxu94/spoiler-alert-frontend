@@ -35,35 +35,34 @@ page {
   background:#FFFFFF;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   display: flex;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 10px;
   padding: 5px;
   /* padding-top: 10px; */
   /* margin-left: 10px; */
   /* margin-right: 10px; */
   margin-bottom: 10px;
-  justify-content: space-between;
-
 }
+
 .food-info {
-  display: flex;
+  width: 300rpx;
+  margin-right: auto;
   /* justify-content: space-between; */
   /* flex-direction: row; */
 }
 
 .toggle {
-  font-size: 80rpx;
-  justify-self: flex-end;
+  font-size: 75rpx;
+  margin-right: 30rpx;
 }
+
 .food-item-name {
-  margin-left: 2px;
   font-size: 15px;
   font-weight: bold;
-  
 }
 
 .icon {
-  flex-grow: 1;
   height: 100%;
   width: 80px;
   object-fit: cover;
@@ -82,10 +81,8 @@ page {
   color: white;
 }
 
-.text {
+/* .text {
   align-self: flex-start;
   padding: 12rpx;
-  /* flex: 1 0 0; */
-  /* width: 200rpx; */
-  flex-grow: 6;
-}
+   width: 200rpx; 
+} */
