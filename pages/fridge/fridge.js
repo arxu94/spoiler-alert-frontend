@@ -17,6 +17,7 @@ Page({
   },
 
   onLoad: function (options) {
+    
     // BONUS: we are getting options from the queries sent by the previous page (our post page)
     // console.log(options)
     // // getting the stories from our globalData (in app.js) and the loggedIn status from the post page
