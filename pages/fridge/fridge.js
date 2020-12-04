@@ -68,9 +68,11 @@ changeBoolean: function(event){
 
 createRecipe: function(event) {
   const items = this.data.foods.filter(element => element.status === true)
+  console.log("testing to check status", items)
   let query = "?search="
   if (items.length === 1) {
-    query += `${items.name},`
+    query += `${items[0].name},`
+    getApp().globalData.foods = [items[0].name]
   } else {
     // items.forEach((item) => {
     // })
@@ -79,6 +81,7 @@ createRecipe: function(event) {
       const item = items[index];
       // console.log(item)
       query += `+${item.name},`
+      getApp().globalData.foods.push(item.name)
     }
   }
   wx.request({
@@ -92,6 +95,9 @@ createRecipe: function(event) {
         // add the response to global data
         getApp().globalData.recipes = results
         console.log(getApp().globalData)
+        wx.navigateTo({
+          url: '/pages/suggestions/suggestions',
+        })
       }
   })
   console.log(event)

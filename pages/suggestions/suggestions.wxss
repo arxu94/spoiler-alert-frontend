@@ -1,1 +1,196 @@
 /* pages/suggestions/suggestions.wxss */
+
+.scroll-view_H{
+
+  width: 100%;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+}
+
+.scroll_item {
+
+position: relative;
+
+width: 84%;
+
+margin: 0 1%;
+
+left: -2%;
+
+display: inline-block;
+
+border-radius: 20rpx !important ;
+
+overflow: hidden;
+
+transform: scale(0.9);
+
+box-shadow: 0 0 10px #ccc;
+
+vertical-align: top;
+
+top: 5%;
+
+height: 70%;
+
+background-color: #fff;
+
+}
+
+.scroll_item:first-child{
+
+  margin-left: 8%;
+
+  left: 0;
+
+}
+
+.scroll_item:last-child{
+
+  margin-right: 8%;
+
+   left: 0;
+
+}
+
+.scroll_item.selected{
+
+   transform: scale(1);
+   box-shadow: 0 0 5rpx #ED984A;
+   border: solid 5px #ED984A;
+
+}
+
+.scroll_item .proImg{
+
+  border-top-left-radius: 20rpx;
+
+  border-top-right-radius: 20rpx;
+
+  width: 100%;
+
+  max-height: 200rpx;
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  z-index: 0;
+
+}
+
+.scroll_item image {
+
+  width: 100%;
+
+  float: left;
+
+  border-top-left-radius: 20rpx;
+
+  border-top-right-radius: 20rpx;
+
+}
+
+.detailBox {
+
+  padding: 10rpx 5% 30rpx 5%;
+
+  float: left;
+
+  width: 90%;
+  height: 20%;
+  border-bottom-left-radius: 20rpx;
+
+  border-bottom-right-radius: 20rpx;
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  z-index: 1;
+
+  background: #fff;
+  word-wrap: break-word; 
+
+}
+
+.proTitle {
+  padding-top: 10px;
+  font-size: 45rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #666;
+
+
+  line-height: 80rpx;
+
+  /* overflow: hidden; */
+
+  /* text-overflow: ellipsis; */
+  /* word-wrap: break-word; */
+  width: auto;
+  /* display: inline-block;
+  white-space: nowrap; */
+
+}
+
+.proDec {
+
+  font-size: 30rpx;
+
+  color: #999;
+
+  line-height: 50rpx;
+
+}
+
+/* .proPrice {
+
+  font-size: 48rpx;
+
+  color: #CA414C;
+
+  line-height: 90rpx;
+
+} */
+
+.detailLink{
+  
+  color: #ED984A;
+
+  font-size: 30rpx;
+
+}
+
+.h1 {
+color: #333;
+text-align: center;
+margin-top: 10px;
+font-size: 20px;
+font-weight: bold;
+width: 95%;
+text-align: center;
+}
+
+.selected-food-items {
+  display: flex;
+  height: auto;
+  background-color: #ED984A;
+  margin: 10px 5px 10px 5px;
+  border-radius: 2px;
+
+}
+
+.header-items-selected {
+  margin: 10px 5px 10px 5px;
+  color: #666;
+  font-size: 30rpx;
+}
