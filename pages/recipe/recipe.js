@@ -30,11 +30,11 @@ Page({
     const id = this.data.id
     console.log(page.data)
     wx.request({
-      url: getApp().globalData.host + `/api/v1/coupons/${page.data.id}`,
+      url: getApp().globalData.host + `api/v1/recipe_details?id=${page.data.id}`,
       success: function(res) {
-        const coupon = res.data
-        console.log(coupon)
-        page.setData(coupon)
+        const recipe = res.data.result
+        console.log(recipe)
+        page.setData(recipe)
       }
     })
   },
