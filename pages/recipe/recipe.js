@@ -26,7 +26,17 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    const page = this
+    const id = this.data.id
+    console.log(page.data)
+    wx.request({
+      url: getApp().globalData.host + `/api/v1/coupons/${page.data.id}`,
+      success: function(res) {
+        const coupon = res.data
+        console.log(coupon)
+        page.setData(coupon)
+      }
+    })
   },
 
   /**
