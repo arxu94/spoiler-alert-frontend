@@ -2,6 +2,10 @@
 page {
   background-color: #FFF1E8;
   height: auto;
+  background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.3)), url(http://chuantu.xyz/t6/741/1607068577x2085490812.png);  background-repeat:no-repeat; 
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .scroll-view_H{
@@ -174,7 +178,9 @@ width: 95%;
 }
 
 .ingredients-list {
-  margin: -85px 5px 10px 5px;
+  margin: -85px 15px 10px 15px ;
+  background-color: rgba(196, 196, 196, 0.1);
+  border-radius: 2px;
 }
 
 .selected-ingredients {
@@ -186,11 +192,12 @@ width: 95%;
   display: flex;
   align-items: flex-start;
   padding: 2px;
+  font-size: 30rpx;
 }
 
 .header-ingredients-selected {
   color: #333;
-  font-size: 35rpx;
+  font-size: 40rpx;
   font-weight: bold;
   margin-left: 10px;
 }
