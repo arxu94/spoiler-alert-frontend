@@ -1,4 +1,8 @@
 /* pages/suggestions/suggestions.wxss */
+page {
+  background-color: #FFF1E8;
+  height: auto;
+}
 
 .scroll-view_H{
 
@@ -34,7 +38,7 @@ vertical-align: top;
 
 top: 5%;
 
-height: 70%;
+height: 71%;
 
 background-color: #fff;
 
@@ -72,7 +76,7 @@ background-color: #fff;
 
   width: 100%;
 
-  max-height: 200rpx;
+  max-height: 300rpx;
 
   position: absolute;
 
@@ -152,16 +156,6 @@ background-color: #fff;
 
 }
 
-/* .proPrice {
-
-  font-size: 48rpx;
-
-  color: #CA414C;
-
-  line-height: 90rpx;
-
-} */
-
 .detailLink{
   
   color: #ED984A;
@@ -177,20 +171,27 @@ margin-top: 10px;
 font-size: 20px;
 font-weight: bold;
 width: 95%;
-text-align: center;
 }
 
-.selected-food-items {
+.ingredients-list {
+  margin: -85px 5px 10px 5px;
+}
+
+.selected-ingredients {
   display: flex;
   height: auto;
-  background-color: #ED984A;
   margin: 10px 5px 10px 5px;
-  border-radius: 2px;
-
+  color: #333;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  padding: 2px;
 }
 
-.header-items-selected {
-  margin: 10px 5px 10px 5px;
-  color: #666;
-  font-size: 30rpx;
+.header-ingredients-selected {
+  color: #333;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-left: 10px;
 }
+
