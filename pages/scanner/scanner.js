@@ -26,7 +26,7 @@ Page({
               wx.request({
                 url: `http://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=${item}`,
                 success(res){
-                  console.log(res.data.translateResult)
+                  console.log(res.data.translateResult[0][0].tgt)
                 }
               })
           }
