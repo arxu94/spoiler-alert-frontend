@@ -35,10 +35,12 @@ page {
 
 .expired {
   color: red !important;
+  filter: brightness(85%);
 }
 
 .warn {
   color: orange !important;
+  filter: brightness(80%);
 }
 
 .header > .h1 {
@@ -99,13 +101,15 @@ page {
 }
 
 .toggle {
-  font-size: 75rpx;
+  font-size: 50rpx;
   margin-right: 30rpx;
+ color: #F88B26;
+ border-radius: 30%;
 }
 
 .food-item-name {
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .icon {
@@ -116,7 +120,8 @@ page {
 
 .shelf-life {
   font-size: 10px;
-  color: gray;
+  color: rgb(61, 60, 60);
+  font-weight: 600;
 }
 
 .generate {
