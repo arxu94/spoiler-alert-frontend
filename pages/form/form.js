@@ -68,7 +68,7 @@ Page({
     })
   },
 
-  anything: function(){
+  barcodescan: function(){
     wx.scanCode({
       success (res) {
         console.log(res)
@@ -86,7 +86,9 @@ Page({
               wx.request({
                 url: `http://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=${item}`,
                 success(res){
-                  console.log(res.data.translateResult[0][0].tgt)
+                  // console.log(res.data.translateResult[0][0].tgt)
+                  const en_item = res.data.translateResult[0][0].tgt
+                  console.log(en_item)
                 }
               })
           }
@@ -117,7 +119,8 @@ Page({
   onLoad: function (options) {
     const page = this
     let year =  new Date(Date.now()).getFullYear()
-    let month = new Date(Date.now()).getMonth()
+    let month = new Date(Date.now()).getMonth()+1
+    console.log(month)
     let date = new Date(Date.now()).getDate()
     page.setData({
       purchase_date: `${year}-${month}-${date}`
