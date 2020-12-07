@@ -14,8 +14,8 @@ page {
 }
 
 .h1 {
-  margin-bottom: 40rpx;
-  text-decoration: underline;
+  margin-bottom: 60rpx;
+  /* text-decoration: underline; */
   font-weight: bolder;
 }
 
