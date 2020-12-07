@@ -5,7 +5,12 @@ Page({
    * Page initial data
    */
   data: {
-    loggedIn: false
+    loggedIn: false,
+
+    right: [{
+      text: 'Delete',
+      style: 'background-color: #F4333C; color: white',
+  }]
   },
   /**
    * Lifecycle function--Called when page load
@@ -155,5 +160,21 @@ createRecipe: function(event) {
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  onClick(e) {
+    console.log('onClick', e.detail)
+    if (e.detail.data) {
+        wx.showModal({
+            title: `The data is ${e.detail.data}`,
+            showCancel: !1,
+        })
+    }
+},
+onShare() {
+    console.log('onShare')
+},
+onCellClick() {
+    console.log('onCellClick')
+}
 })

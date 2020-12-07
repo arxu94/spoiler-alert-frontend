@@ -6,14 +6,19 @@
 <view class="body">
 
 <view wx:key='index' wx:for="{{foods}}" wx:for-item="food">
-  <view class="card-food">
+  <wux-cell-group class="card-food">
+  <wux-swipe-action autoClose right="{{ right }}">
+  <!-- <view class="card-food"> -->
     <image class='icon' src="/images/food.png" />
       <view class="food-info">
         <view class="food-item-name">{{food.name}}</view>
         <view class="shelf-life {{food.expired ? 'expired' : ''}} {{food.warn ? 'warn' : ''}}">{{food.expired ? "Expired on: " : ""}} {{food.warn ? "Will expire on: " : ""}} {{food.warn || food.expired ? "" : "Expiration date: "}} {{food.expire_date}}</view>
       </view>
     <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✔️" : "☐"}}</view>
-  </view>
+                
+  <!-- </view> -->
+</wux-swipe-action>
+</wux-cell-group>
 </view>
 
   <button class="generate" bindtap="createRecipe">Turn on Cooking Assistant</button>
