@@ -8,22 +8,19 @@
     <view class ="h1">➕Food 🥑🥩🥦</view>
     <view class="section">
       <view class="section__title">Item</view>
-      <input name="name" value="{{name}}" placeholder="" />
+      <input name="name" maxlength="40" value="{{name}}" placeholder="apple, eggs etc." />
       <!-- change to the picker component for tags -->
+      <!-- changed picker code (commented out below) to buttons -->
       <view class="section__title">Category</view>
-      <view wx:for="{{tags}}" wx:for-item="tag"></view>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <view class="picker">
-          Your item：{{array[index]}}
-        </view>
-        </picker>
-
-      <view class="section__title">Purchase date</view>
+      <view class="category-box">
+        <button class="btn-category {{categories.active == index ? 'btn-active' : ''}}" wx:for="{{categories.array}}" bindtap="toggleActiveCategory" data-index="{{index}}"> <image class='icon' src="{{item.image}}"></image> <view class="item-name">{{item.name}}</view> </button>
+      </view>
+      <view class="section__title purchase-date">Purchase date</view>
       <picker mode="date" value="{{purchase_date}}" start="01-01-2020" end="31-12-2030" bindchange="bindDateChange">
-    <view class="picker">
+      <view class="picker">
       Purchased on: {{purchase_date}}
-    </view>
-    </picker>
+      </view>
+      </picker>
 
       <!-- <input name="purchase_date" value="{{purchase_date}}" placeholder="Date/Month/Year" /> -->
       <button form-type="submit" class='add-btn'>Put in fridge!</button>
