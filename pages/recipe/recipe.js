@@ -39,6 +39,11 @@ Page({
     })
   },
 
+  saveRecipe: function(){
+    // data: {recipe: {user_id: 2, title: "", ingredient: '', instructions: ''}}
+    
+  },
+
   /**
    * Lifecycle function--Called when page hide
    */

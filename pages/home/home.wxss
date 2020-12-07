@@ -43,18 +43,33 @@ page {
   justify-content: space-between;
 }
 
-.buttons .one {
+.buttons > .one {
   display: flex;
   background-color: #F88B26;
   color: white;
   /* height: 120px; */
   width: 150px;
-  /* padding: 10px; */
+  border: solid 5rpx #ED984A;
+  /* box-shadow: 0 0 4rpx; */
+  box-shadow: 0 0 5rpx #ED984A;
+  justify-content: center;
+  font-size: 65rpx;
+}
+.buttons > .two {
+  display: flex;
+  background-color: #F88B26;
+  color: white;
+  font-size: 200rpx;
+  /* height: 120px; */
+  width: 150px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  justify-content: center;
   /* text-align: center; */
-  /* /* align-items: center;
-  margin-bottom: 30px;
+  align-items: center; 
+  /* margin-bottom: 30px;
   margin-right: 8px;
-  margin-left: 8px; */
+  margin-left: 8px;  */
   border: solid 5rpx #ED984A;
   /* box-shadow: 0 0 4rpx; */
   box-shadow: 0 0 5rpx #ED984A;

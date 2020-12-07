@@ -41,7 +41,13 @@ Page({
 
     this.setData({
       index: index,
-      foodItemName: this.data.array[index]
+      foodItemName: this.data.array[index],
+    })
+  },
+  bindDateChange: function (e) {
+    console.log('Picker is being used, the date is', e.detail.value)
+    this.setData({
+      purchase_date: e.detail.value
     })
   },
 
@@ -49,26 +55,21 @@ Page({
   submit: function (e) {
     //...
     console.log('data', e)
-    // let existingFood = getApp().globalData.foods
-    console.log(e.detail.value)
-
     let name = e.detail.value.name;
     let category = this.data.foodItemName;
-    let purchase_date = e.detail.value.purchase_date;
+    let purchase_date = this.data.purchase_date;
 
-    // let status = e.detail.value.purchase_date;
-    // let shelf_life = e.detail.value.shelf_life;
-    
     let food = {
       name: name,
-      // status: status,
-      // shelf_life: shelf_life,
       tag_list: category,
       purchase_date: purchase_date,
       user_id: getApp().globalData.userId
     }
+
+    console.log("checking post api", food)
+
     wx.request({
-      url: getApp().globalData.host + `/api/v1/foods`,
+      url: getApp().globalData.host + `api/v1/foods`,
       method: 'POST',
       data: { food: food },
       success(res) {
@@ -102,6 +103,12 @@ Page({
   //  make route in rails for all tags, call API to get these tags
   onLoad: function (options) {
     const page = this
+    let year =  new Date(Date.now()).getFullYear()
+    let month = new Date(Date.now()).getMonth()
+    let date = new Date(Date.now()).getDate()
+    page.setData({
+      purchase_date: `${year}-${month}-${date}`
+    })
     wx.request({
       url: getApp().globalData.host + `/api/v1/taglist`,
       success: function(response) {

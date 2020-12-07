@@ -1,9 +1,12 @@
 <!--pages/recipe/recipe.wxml-->
 <!-- <text>pages/recipe/recipe.wxml</text> -->
-<view class="body">
+<image class='banner' src="{{image}}"></image>
+
   <view class ="h1">Recipe Details for <text class="titles">{{title}}</text></view>
+
+<view class="body">
+
   <view class ="h2">Ready in: <text class="titles">{{readyInMinutes}}</text> minutes</view>
-  <view class ="h2">Servings: <text class="titles">{{servings}}</text> pax</view>
   <view class ="h2" id="instructions">Here's how to make it:</view>
 
   <view class ="h3">{{instructions}}</view>
