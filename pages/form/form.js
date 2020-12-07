@@ -42,9 +42,9 @@ Page({
     //...
     console.log('data', e)
     let name = e.detail.value.name;
-    let category = this.data.categories.array[this.data.categories.active];
+    let category = this.data.categories.array[this.data.categories.active].name;
     let purchase_date = this.data.purchase_date;
-
+    console.log("checking if tag is working", category)
     let food = {
       name: name,
       tag_list: category,
@@ -67,6 +67,7 @@ Page({
       }
     })
   },
+
 
   barcodescan: function(){
     let page = this
