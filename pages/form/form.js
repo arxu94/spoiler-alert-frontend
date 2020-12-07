@@ -5,34 +5,12 @@ Page({
    * Page initial data
    */
   data: {
-    array: ['Meat and Fish', 'Dairy', 'Fruits and Veggies', 'Condiments', 'Eggs', 'Others'],
+    // array: ['Meat and Fish', 'Dairy', 'Fruits and Veggies', 'Condiments', 'Eggs', 'Others'],
     selectedFoodIndex: 0,
-    objectArray: [
-      {
-        id: 0,
-        name: 'Meat and Fish'
-      },
-      {
-        id: 1,
-        name: 'Dairy'
-      },
-      {
-        id: 2,
-        name: 'Fruits and Veggies'
-      },
-      {
-        id: 3,
-        name: 'Condiments'
-      },
-      {
-        id: 4,
-        name: 'Eggs'
-      },
-      {
-        id: 5,
-        name: 'Others'
-      }
-    ],
+    categories: {
+      active: 0,
+      array: ['Meat and Fish', 'Dairy', 'Fruits and Veggies', 'Condiments', 'Eggs', 'Others']
+    }
   },
   bindPickerChange: function (e) {
     console.log('picker has been used, the choice is', e)
@@ -51,12 +29,18 @@ Page({
     })
   },
 
+  toggleActiveCategory: function (e) {
+    let index = e.currentTarget.dataset.index
+    this.setData({
+      "categories.active": index
+    })
+  },
   // New Food Submission
   submit: function (e) {
     //...
     console.log('data', e)
     let name = e.detail.value.name;
-    let category = this.data.foodItemName;
+    let category = this.data.categories.array[this.data.categories.active];
     let purchase_date = this.data.purchase_date;
 
     let food = {

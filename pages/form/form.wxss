@@ -4,6 +4,26 @@ page {
   background-color: #FFF1E8;
 }
 
+.category-box {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+
+}
+
+.category-box > button {
+  flex: 1 1 200rpx;
+  height: 190rpx;
+  border: solid grey 2rpx;
+ 
+}
+.meat-and-fish {
+  background-image: url(http://chuantu.xyz/t6/741/1607313924x1033348314.png);
+}
+
+.btn-active {
+  border: blue solid 5rpx !important;
+}
 
 .picker{
   padding: 13px;
