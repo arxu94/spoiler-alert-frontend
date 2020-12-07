@@ -22,9 +22,9 @@ Page({
 
             const cn_item = res.data.data.goodsName
             const cn_brand = res.data.data.brand
-            console.log(cn_item.sub(cn_brand))
-            // const item = cn_item.sub(cn_brand, "")
-            // console.log(item)
+            // console.log(cn_item.sub(cn_brand))
+            const en_item = (cn_item.split(`${cn_brand}`)).join("")
+            console.log(en_item)
           }
         })
       }
