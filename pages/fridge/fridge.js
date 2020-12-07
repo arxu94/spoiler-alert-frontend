@@ -58,6 +58,17 @@ Page({
       success: function (response) {
         console.log(response.data[0])
         const foods = response.data
+        foods.forEach(food => {
+          // Parse the dates
+          // Create a warning window
+          // check if expiration is greater than warning window ==> warning
+          // check if expiration is greater than today ==> expired          
+          let today = Date.parse(new Date())
+          let expiration = Date.parse(new Date(food.expire_date))
+          let warning_window = today + (1000 * 60 * 60 * 24 * 3)
+          if (expiration < today) food['expired'] = true
+          else if (expiration < warning_window) food['warn'] = true
+        })
         page.setData({ foods })
       }
   })
