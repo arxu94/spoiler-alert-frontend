@@ -38,6 +38,14 @@ justify-content: space-around;
   width: 70rpx;
 }
 
+.barcode {
+  flex: 0 1 280rpx;
+  height: 100rpx;
+  width: 75rpx;
+  font-size: 25rpx;
+  color: #333;
+}
+
 .item-name {
   font-size: 30rpx;
   color: #333;

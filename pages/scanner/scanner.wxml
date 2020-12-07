@@ -1,3 +1,5 @@
 <!--pages/scanner/scanner.wxml-->
 <text>pages/scanner/scanner.wxml</text>
 <button bindtap="anything">Scan item barcode</button>
+
+<!-- <text>{{cn_item}}</text> -->

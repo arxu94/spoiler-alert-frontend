@@ -11,13 +11,24 @@ Page({
   anything: function(){
     wx.scanCode({
       success (res) {
-        console.log(res.result)
+        console.log(res)
         const barcode = res.result
         wx.request({
           url: `https://mxnzp.com/api/barcode/goods/details?barcode=${barcode}&app_id=zlcwkesmllkgvjbm&app_secret=NHlrMTd5c3JLYzU4M0dsTjl5YVp6UT09`,
           success(res){
-            console.log(res.data.data.goodsName)
+            console.log(res.data.data)
+            // console.log(res.data.data.goodsName)
+            // console.log(res.data.data.brand)
             const cn_item = res.data.data.goodsName
+            const cn_brand = res.data.data.brand
+            const item = (cn_item.split(`${cn_brand}`)).join("")
+            console.log(item)
+              wx.request({
+                url: `http://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=${item}`,
+                success(res){
+                  console.log(res.data.translateResult[0][0].tgt)
+                }
+              })
           }
         })
       }
