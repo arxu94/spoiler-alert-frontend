@@ -5,7 +5,7 @@
 
 <form bindsubmit="submit">
   <view class="container">
-    <view class ="h1">Add new item</view>
+    <view class ="h1">➕Food 🥑🥩🥦</view>
     <view class="section">
       <view class="section__title">Item</view>
       <input name="name" value="{{name}}" placeholder="" />
@@ -19,9 +19,9 @@
         </picker>
 
       <view class="section__title">Purchase date</view>
-      <picker mode="date" value="{{date}}" start="2020-01-01" end="2030-12-31" bindchange="bindDateChange">
+      <picker mode="date" value="{{purchase_date}}" start="01-01-2020" end="31-12-2030" bindchange="bindDateChange">
     <view class="picker">
-      Purchased on: {{date}}
+      Purchased on: {{purchase_date}}
     </view>
     </picker>
 
