@@ -14,6 +14,38 @@ Page({
   onLoad: function (options) {
     this.setData({id: options.id})
   },
+    //add recipe to own cookbook
+  saveRecipe: function () {
+    // data: {recipe: {user_id: 2, title: "", ingredient: '', instructions: ''}}
+    //get the data
+    const user_id = getApp().globalData.userId
+    const title = this.data.title
+    const ingredient = this.data.extendedIngredients
+    ingredient.forEach(element => {
+      console.log('name?', element.name)
+    });
+    console.log("ingrediens:", ingredient)
+    const instructions = this.data.instructions
+    const host = getApp().globalData.host
+
+    const recipe = {
+      user_id: user_id,
+      title: title,
+      ingredient: ingredient,
+      instructions: instructions
+    }
+    console.log(recipe)
+    wx.request({
+      url: host + 'api/v1/recipes/',
+      method: 'POST',
+      data: {recipe: recipe},
+      success() {
+        wx.reLaunch({
+          url: '/pages/recipes/recipes'
+        });
+      }
+    })
+  },
 
   /**
    * Lifecycle function--Called when page is initially rendered
@@ -37,11 +69,6 @@ Page({
         page.setData(recipe)
       }
     })
-  },
-
-  saveRecipe: function(){
-    // data: {recipe: {user_id: 2, title: "", ingredient: '', instructions: ''}}
-    
   },
 
   /**
