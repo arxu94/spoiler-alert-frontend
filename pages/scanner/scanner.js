@@ -11,13 +11,20 @@ Page({
   anything: function(){
     wx.scanCode({
       success (res) {
-        console.log(res.result)
+        console.log(res)
         const barcode = res.result
         wx.request({
           url: `https://mxnzp.com/api/barcode/goods/details?barcode=${barcode}&app_id=zlcwkesmllkgvjbm&app_secret=NHlrMTd5c3JLYzU4M0dsTjl5YVp6UT09`,
           success(res){
+            console.log(res.data.data)
             console.log(res.data.data.goodsName)
+            console.log(res.data.data.brand)
+
             const cn_item = res.data.data.goodsName
+            const cn_brand = res.data.data.brand
+            console.log(cn_item.sub(cn_brand))
+            // const item = cn_item.sub(cn_brand, "")
+            // console.log(item)
           }
         })
       }
