@@ -33,6 +33,14 @@ page {
   margin: 30rpx;
 } */
 
+.expired {
+  color: red !important;
+}
+
+.warn {
+  color: orange !important;
+}
+
 .header > .h1 {
   margin-left: 60rpx;
 }
