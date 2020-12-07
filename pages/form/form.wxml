@@ -19,7 +19,13 @@
         </picker>
 
       <view class="section__title">Purchase date</view>
-      <input name="purchase_date" value="{{purchase_date}}" placeholder="Date/Month/Year" />
+      <picker mode="date" value="{{date}}" start="2020-01-01" end="2030-12-31" bindchange="bindDateChange">
+    <view class="picker">
+      Purchased on: {{date}}
+    </view>
+    </picker>
+
+      <!-- <input name="purchase_date" value="{{purchase_date}}" placeholder="Date/Month/Year" /> -->
       <button form-type="submit" class='add-btn'>Put in fridge!</button>
     </view>
   </view>
