@@ -29,16 +29,16 @@ Page({
     const host = getApp().globalData.host
 
     const recipe = {
-      user_id: user_id,
-      title: title,
-      ingredient: ingredient,
-      instructions: instructions
+      "user_id": user_id,
+      "title": title,
+      "ingredient": ingredient,
+      "instructions": instructions
     }
     console.log(recipe)
     wx.request({
       url: host + 'api/v1/recipes/',
       method: 'POST',
-      data: {recipe: recipe},
+      data: recipe,
       success() {
         wx.reLaunch({
           url: '/pages/recipes/recipes'

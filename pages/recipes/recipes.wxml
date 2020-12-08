@@ -1,2 +1,9 @@
-<!--pages/recipes/recipes.wxml-->
-<text>pages/recipes/recipes.wxml</text>
+<view class="h1">Recipes that you saved</view>
+
+<view class="container">
+  <view bindtap="goToMyRecipe" class="recipe-card">
+    <image class='image' src="{{image}}"></image>
+    <view class ="h2"><text class="titles">{{title}}</text></view>
+    <view class ="h2">Need: <text class="titles">{{readyInMinutes}}</text> minutes</view>
+  </view>
+</view>

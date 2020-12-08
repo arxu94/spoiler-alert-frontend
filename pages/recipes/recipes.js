@@ -12,7 +12,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -26,7 +26,14 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    const user_id = getApp().globalData.userId;
+    console.log(user_id)
+    wx.request({
+      url: getApp().globalData.host +`api/v1/users/${user_id}/recipes`,
+      success: (response) => {
+      console.log(response)
+      }
+    })
   },
 
   /**

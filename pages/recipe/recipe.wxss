@@ -2,7 +2,7 @@
 page {
   background-color: #FFF1E8;
   height: auto;
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(http://chuantu.xyz/t6/741/1607068577x2085490812.png);
+  /* background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(http://chuantu.xyz/t6/741/1607068577x2085490812.png); */
   background-repeat: no-repeat;
   /* background-size: cover;  */
   background-position: center;
@@ -16,22 +16,22 @@ page {
   }
 
 .body {
-  margin: 30rpx 50rpx;
+  margin: 10rpx 50rpx;
   padding: 14rpx; 
-  background-color: rgba(212, 208, 208, 0.897);
-  border-radius: 12rpx;
+  /* background-color: rgba(212, 208, 208, 0.897); */
+  /* border-radius: 12rpx; */
 }
 
 .h1 {
-  margin-bottom: 45rpx;
+  margin-bottom: 40rpx;
   padding: 0 50rpx;
-  font-size: 50rpx;
+  font-size: 40rpx;
   /* text-decoration: underline; */
   font-weight: bolder;
 }
 
 .h2 {
-  margin-bottom: 25rpx;
+  margin: 25rpx 0;
   text-decoration: underline;
 }
 
@@ -44,6 +44,7 @@ page {
 
 #instructions {
   text-decoration: underline;
+  font-weight: bolder;
 }
 
 .titles {

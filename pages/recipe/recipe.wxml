@@ -2,14 +2,18 @@
 <!-- <text>pages/recipe/recipe.wxml</text> -->
 <image class='banner' src="{{image}}"></image>
 
-  <view class ="h1">Recipe Details for <text class="titles">{{title}}</text></view>
+  <view class ="h1"><text class="titles">{{title}}</text></view>
 
 <view class="body">
 
   <view class ="h2">Ready in: <text class="titles">{{readyInMinutes}}</text> minutes</view>
+  <view class="h2">Ingredients:</view>
+  <view wx:for="{{extendedIngredients}}">
+    <view>- {{item.name}}, {{item.amount}} {{item.unit}}</view>
+  </view>
   <view class ="h2" id="instructions">Here's how to make it:</view>
 
-  <view class ="h3">{{instructions}}</view>
+  <view class ="h3">{{instructions === null ? summary : instructions}}</view>
 
 </view>
 
