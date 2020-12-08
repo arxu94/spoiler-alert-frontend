@@ -4,24 +4,22 @@
   <view class="btn-to-form" bindtap="goToForm">Add new item</view>
 </view>
 <view class="body">
-
-<view class="card-food" wx:key='index' wx:for="{{foods}}" wx:for-item="food">
-  <view class="delete-button" bindtap="deleteFood" data-id="{{food.id}}">
-    <image class='delete-icon' src="/images/delete-icon.png" />
-  </view>
-    <image class='icon' src="/images/food.png" />
-      <view class="food-info">
-        <view class="food-item-name">{{food.name}}</view>
-        <view class="shelf-life {{food.expired ? 'expired' : ''}} {{food.warn ? 'warn' : ''}}">{{food.expired ? "Expired on: " : ""}} {{food.warn ? "Will expire on: " : ""}} {{food.warn || food.expired ? "" : "Expiration date: "}} {{food.expire_date}}</view>
-      </view>
-
+  <view class="card-food" wx:key='index' wx:for="{{foods}}" wx:for-item="food">
     <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✔️" : "☐"}}</view>
-                
+    
+    <view>
+      <image class='icon' src="{{food.image_url}}" />
+    </view>
+    <view class="food-info">
+      <view class="food-item-name">{{food.name}}</view>
+      <view class="shelf-life {{food.expired ? 'expired' : ''}} {{food.warn ? 'warn' : ''}}">{{food.expired ? "Expired on: " : ""}} {{food.warn ? "Will expire on: " : ""}} {{food.warn || food.expired ? "" : "Expiration date: "}} {{food.expire_date}}</view>
+    </view>
+      <view class="delete-button" bindtap="deleteFood" data-id="{{food.id}}">
+        <image class='delete-icon' src="/images/delete-icon.png" />
+      </view>
   </view>
+  </view>
+      
 
-</view>
-
-  <button class="generate" bindtap="createRecipe">Turn on Cooking Assistant</button>
-
-<!-- </view> -->
+<button class="generate" bindtap="createRecipe">Turn on Cooking Assistant</button>
   
