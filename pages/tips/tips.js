@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/tips/tips.js
 Page({
 
   /**
@@ -8,27 +8,6 @@ Page({
 
   },
 
-  goToFridge: function() {
-    wx.navigateTo({
-      url: '/pages/fridge/fridge',
-    })
-  },
-
-  goToForm: function() {
-    wx.navigateTo({
-      url: '/pages/form/form',
-    })
-  },
-  goToRecipes: function(){
-    wx.navigateTo({
-      url: '/pages/recipes/recipes',
-    })
-  },
-  goToTips: function() {
-    wx.navigateTo({
-      url: '/pages/tips/tips',
-    })
-  },
   /**
    * Lifecycle function--Called when page load
    */
