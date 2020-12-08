@@ -13,4 +13,4 @@
 
 </view>
 
-<!-- <button bindtap="saverecipe" class='button-save-recipe' data-id="{{id}}">Save this recipe</button> -->
+<button bindtap="saveRecipe" class='button-save-recipe' data-id="{{id}}">Save this recipe</button>
