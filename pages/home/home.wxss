@@ -54,8 +54,8 @@ page {
   background-color: #F88B26;
   color: white;
   /* height: 120px; */
-  width: 150px;
-  height: 150px;
+  width: 300rpx;
+  height: 300rpx;
   border: solid 5rpx #ED984A;
   /* box-shadow: 0 0 4rpx; */
   box-shadow: 0 0 5rpx #ED984A;
@@ -67,8 +67,8 @@ page {
   background-color: #F88B26;
   color: white;
   font-size: 150rpx;
-  height: 150px;
-  width: 150px;
+  width: 300rpx;
+  height: 300rpx;
   /* padding-top: 10px;
   padding-bottom: 10px; */
   justify-content: center;
@@ -85,8 +85,8 @@ page {
   display: flex;
   background-color: #F88B26;
   color: white;
-  height: 150px;
-  width: 150px;
+  width: 300rpx;
+  height: 300rpx;
   border: solid 5rpx #ED984A;
   /* box-shadow: 0 0 4rpx; */
   box-shadow: 0 0 5rpx #ED984A;
@@ -98,8 +98,8 @@ page {
   background-color: #F88B26;
   color: white;
   font-size: 45rpx;
-  height: 150px;
-  width: 150px;
+  width: 300rpx;
+  height: 300rpx;
   /* padding-top: 10px;
   padding-bottom: 10px; */
   justify-content: center;
