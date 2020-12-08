@@ -5,18 +5,23 @@
 </view>
 <view class="body">
 
-<view wx:key='index' wx:for="{{foods}}" wx:for-item="food">
-  <view class="card-food">
+<view class="card-food" wx:key='index' wx:for="{{foods}}" wx:for-item="food">
+  <view class="delete-button" bindtap="deleteFood" data-id="{{food.id}}">
+    <image class='delete-icon' src="/images/delete-icon.png" />
+  </view>
     <image class='icon' src="/images/food.png" />
       <view class="food-info">
         <view class="food-item-name">{{food.name}}</view>
         <view class="shelf-life {{food.expired ? 'expired' : ''}} {{food.warn ? 'warn' : ''}}">{{food.expired ? "Expired on: " : ""}} {{food.warn ? "Will expire on: " : ""}} {{food.warn || food.expired ? "" : "Expiration date: "}} {{food.expire_date}}</view>
       </view>
+
     <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✔️" : "☐"}}</view>
+                
   </view>
+
 </view>
 
   <button class="generate" bindtap="createRecipe">Turn on Cooking Assistant</button>
 
-</view>
+<!-- </view> -->
   
