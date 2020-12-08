@@ -1,1 +1,36 @@
-/* pages/recipes/recipes.wxss */
+page {
+  background-color: #FFF1E8;
+
+}
+
+.body {
+  margin: 0 40rpx;
+}
+.h1 {
+  height: 120rpx;
+  margin: 20rpx 0 20rpx 70rpx;
+  font-weight: bold;
+  font-size: 45rpx;
+  text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
+ 
+}
+.recipe-card {
+  display: flex;
+  margin: 25rpx;
+  padding: 0 10rpx 0 0;
+  border: solid grey 1rpx;
+  border-radius: 8rpx;
+  box-shadow: 1rpx 0 15px rgba(0,0,0,0.3);
+}
+.image {
+  height: 220rpx;
+  flex: 1 1 300rpx;
+  margin: 10rpx;
+}
+
+h2 {
+  flex: 1;
+}
+.btn-delete {
+  margin: 50rpx 0 10rpx 0;
+}
