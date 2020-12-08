@@ -21,18 +21,22 @@ Page({
     const user_id = getApp().globalData.userId
     const title = this.data.title
     const ingredient = this.data.extendedIngredients
-    ingredient.forEach(element => {
-      console.log('name?', element.name)
-    });
-    console.log("ingrediens:", ingredient)
+    const image = this.data.image
+    const cooking_time = this.data.readyInMinutes
+    // ingredient.forEach(element => {
+      // console.log('name?', element.name)
+    // });
+    // console.log("ingrediens:", ingredient)
     const instructions = this.data.instructions
     const host = getApp().globalData.host
 
     const recipe = {
       "user_id": user_id,
-      "title": title,
-      "ingredient": ingredient,
-      "instructions": instructions
+      "title": title.substring(0, 30) + "...",
+      "ingredient": JSON.stringify(ingredient),
+      "instructions": instructions,
+      "image": image,
+      "cooking_time": JSON.stringify(cooking_time)
     }
     console.log(recipe)
     wx.request({

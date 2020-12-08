@@ -1,9 +1,11 @@
 <view class="h1">Recipes that you saved</view>
 
 <view class="container">
-  <view bindtap="goToMyRecipe" class="recipe-card">
-    <image class='image' src="{{image}}"></image>
-    <view class ="h2"><text class="titles">{{title}}</text></view>
-    <view class ="h2">Need: <text class="titles">{{readyInMinutes}}</text> minutes</view>
+  <view bindtap="goToMyRecipe" wx:for="{{my_recipes}}">
+    <view class="recipe-card">
+      <image class='image' src="{{item.image}}"></image>
+      <view class ="h2"><text class="titles">{{item.title}}</text></view>
+      <view class ="h2">Need: <text class="titles">{{item.cooking_time}}</text> minutes</view>
+    </view>
   </view>
 </view>
