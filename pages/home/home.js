@@ -47,7 +47,16 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    const page = this
+    const id = getApp().globalData.userId
+    wx.request({
+      url: getApp().globalData.host + `/api/v1/tips/user/${id}`,
+      success: function (response) {
+        console.log(response.data)
+        const tips = response.data
+      }
+    })
+    page.setData({ tips })
   },
 
   /**
