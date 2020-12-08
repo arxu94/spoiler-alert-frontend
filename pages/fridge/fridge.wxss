@@ -91,8 +91,6 @@ page {
   padding-right: 5px;
   padding-bottom: 3px;
   padding-top: 2px;
-  /* margin-left: 10px; */
-  /* margin-right: 10px; */
   margin-bottom: 10px;
 }
 
@@ -103,10 +101,9 @@ page {
 }
 
 .toggle {
-  font-size: 50rpx;
-  margin-right: 20rpx;
+  font-size: 45rpx;
+  margin-right: 10rpx;
  color: #F88B26;
- border-radius: 30%;
 }
 
 .food-item-name {
@@ -115,9 +112,11 @@ page {
 }
 
 .icon {
-  height: 100%;
-  width: 80px;
+  height: 75%;
+  width: 40px;
   object-fit: cover;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .shelf-life {
@@ -157,4 +156,5 @@ page {
   align-items: center;
   justify-content: center;
   padding-left: 5px;
+  padding-right: 5px;
 }

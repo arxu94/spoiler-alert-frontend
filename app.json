@@ -5,7 +5,15 @@
     "pages/form/form",
     "pages/recipe/recipe",
     "pages/recipes/recipes",
+<<<<<<< HEAD
     "pages/suggestions/suggestions"
+=======
+    "pages/info/info",
+    "pages/scanner/scanner",
+    "pages/tips/tips",
+    "pages/suggestions/suggestions",
+    "pages/my_recipe/my_recipe"
+>>>>>>> master
   ],
   "window":{
     "backgroundTextStyle":"light",

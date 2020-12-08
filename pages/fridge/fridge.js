@@ -53,27 +53,39 @@ Page({
 
 
   onShow: function () {
-    const page = this
-    wx.request({
-      url: getApp().globalData.host + `/api/v1/foods`,
-      success: function (response) {
-        // console.log(response.data[0])
-        const foods = response.data
-        foods.forEach(food => {
-          // Parse the dates
-          // Create a warning window
-          // check if expiration is greater than warning window ==> warning
-          // check if expiration is greater than today ==> expired          
-          let today = Date.parse(new Date())
-          let expiration = Date.parse(new Date(food.expire_date))
-          let warning_window = today + (1000 * 60 * 60 * 24 * 3)
-          if (expiration < today) food['expired'] = true
-          else if (expiration < warning_window) food['warn'] = true
-        })
-        page.setData({ foods })
-      }
-  })
+    this.getFoods()
 },
+
+getFoods: function() {
+  wx.request({
+    url: getApp().globalData.host + `/api/v1/foods`,
+    success: (response) => {
+      const foods = response.data
+      foods.forEach(food => {
+        this.addExpiration(food);
+        this.addIcon(food);
+      })
+      this.setData({ foods })
+    }
+})
+},
+
+addExpiration: function(food) {
+  let today = Date.parse(new Date())
+  let expiration = Date.parse(new Date(food.expire_date))
+  let warning_window = today + (1000 * 60 * 60 * 24 * 3)
+  if (expiration < today) food['expired'] = true
+  else if (expiration < warning_window) food['warn'] = true
+  return food
+},
+
+addIcon: function(food) {
+  let icons = [{name: 'Meat and Fish', image: '/images/meat-icon.png'}, {name: 'Dairy', image: '/images/dairy-icon.png'}, {name: 'Fruits and Veggies', image: '/images/banana-icon.png'}, {name: 'Condiments', image: '/images/sauces-icon.png'}, {name: 'Eggs', image: '/images/eggs-icon.png'}, {name: 'Others'}];
+
+  let icon = icons.find( ({ name }) =>  name === food.tag_list[0])
+  food["image_url"] = icon.image
+},
+
 changeBoolean: function(event){
   console.log(event)
   const id = event.currentTarget.dataset.id
