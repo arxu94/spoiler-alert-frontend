@@ -50,11 +50,17 @@ Page({
     })
   },
 
-  deleteRecipe: function() {
-    const recipe_id = this.getData().my_recipes.id
+  deleteRecipe: function(e) {
+    const recipe_id = e.currentTarget.dataset;
     console.log(recipe_id)
     wx.request({
-      url: 'api/v1/recipes/${recipe_id}',
+      url: getApp().globalData.host + `api/v1/recipes/${recipe_id.id}`,
+      method: 'DELETE',
+      success() {
+        wx.redirectTo({
+          url: '/pages/recipes/recipes'
+        });
+      }
     })
   },
   /**
