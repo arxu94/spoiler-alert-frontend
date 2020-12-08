@@ -5,7 +5,12 @@ Page({
    * Page initial data
    */
   data: {
-    loggedIn: false
+    loggedIn: false,
+
+    right: [{
+      text: 'Delete',
+      style: 'background-color: #F4333C; color: white',
+  }]
   },
   /**
    * Lifecycle function--Called when page load
@@ -40,17 +45,13 @@ Page({
       // ] })
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
+
   onReady: function () {
 
   },
 
 
-  /**
-   * Lifecycle function--Called when page show
-   */
+
   onShow: function () {
     const page = this
     wx.request({
@@ -78,11 +79,25 @@ changeBoolean: function(event){
   const id = event.currentTarget.dataset.id
   const foods = this.data.foods
   const food = foods.find(element => element.id === id)
-  food.status = !food.status
-  this.setData({foods: foods})
-  console.log(food)
-  // console.log(food)
+    food.status = !food.status
+    this.setData({foods: foods})
+    console.log(food)
 },
+
+deleteFood(e) {
+  const id = e.currentTarget.dataset;
+  console.log(id)
+
+  // make a DELETE request
+  wx.request({
+    url: getApp().globalData.host + `api/v1/foods/${id.id}`,
+    method: 'DELETE',
+    success() {
+      // redirect to index page when done
+      wx.redirectTo({
+        url: '/pages/fridge/fridge'
+      });
+    },
 
 createRecipe: function(event) {
   const items = this.data.foods.filter(element => element.status === true)
@@ -155,5 +170,7 @@ createRecipe: function(event) {
    */
   onShareAppMessage: function () {
 
-  }
+  },
+});
+}
 })

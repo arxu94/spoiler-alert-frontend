@@ -54,14 +54,15 @@ page {
   top: 0;
   background: #FFF1E8;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .btn-to-form {
   margin-left: auto;
-  margin-right: 35rpx;
-  padding: 10rpx;
-  font-weight: 500;
-  width: 255rpx;
+  margin-right: 32rpx;
+  margin-bottom: auto;
+  padding: 10px;
+  width: 235rpx;
   border: solid 4rpx #f8983e;
   box-shadow: 0 0 8rpx rgba(0,0,0,0.3);
   border-radius: 10rpx;
@@ -85,9 +86,11 @@ page {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 10px;
-  padding: 5px;
-  /* padding-top: 10px; */
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 5px;
+  padding-bottom: 3px;
+  padding-top: 2px;
   /* margin-left: 10px; */
   /* margin-right: 10px; */
   margin-bottom: 10px;
@@ -96,13 +99,12 @@ page {
 .food-info {
   width: 300rpx;
   margin-right: auto;
-  /* justify-content: space-between; */
-  /* flex-direction: row; */
+  
 }
 
 .toggle {
   font-size: 50rpx;
-  margin-right: 30rpx;
+  margin-right: 20rpx;
  color: #F88B26;
  border-radius: 30%;
 }
@@ -132,8 +134,27 @@ page {
   color: rgb(241, 241, 241);
 }
 
-/* .text {
-  align-self: flex-start;
-  padding: 12rpx;
-   width: 200rpx; 
-} */
+ /* .delete-button {
+   background-color: rgba(247, 35, 35, 0.705);
+  width: 30px;
+  height: 20px;
+  color: white;
+  border-radius: 50%;
+  filter: brightness(80%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ }, */
+
+.delete-icon {
+  width: 15px;
+  height: 15px;
+  color: white;
+  filter: brightness(80%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+}
