@@ -12,6 +12,7 @@ Page({
       array: [{name: 'Meat and Fish', image: '/images/meat-icon.png'}, {name: 'Dairy', image: '/images/dairy-icon.png'}, {name: 'Fruits and Veggies', image: '/images/banana-icon.png'}, {name: 'Condiments', image: '/images/sauces-icon.png'}, {name: 'Eggs', image: '/images/eggs-icon.png'}, {name: 'Others'}]
     }
   },
+
   bindPickerChange: function (e) {
     console.log('picker has been used, the choice is', e)
     let index = e.detail.value
@@ -22,6 +23,7 @@ Page({
       foodItemName: this.data.array[index],
     })
   },
+
   bindDateChange: function (e) {
     console.log('Picker is being used, the date is', e.detail.value)
     this.setData({
@@ -40,9 +42,9 @@ Page({
     //...
     console.log('data', e)
     let name = e.detail.value.name;
-    let category = this.data.categories.array[this.data.categories.active];
+    let category = this.data.categories.array[this.data.categories.active].name;
     let purchase_date = this.data.purchase_date;
-
+    console.log("checking if tag is working", category)
     let food = {
       name: name,
       tag_list: category,
@@ -61,6 +63,40 @@ Page({
         // redirect to index page when done
         wx.navigateTo({
           url: '/pages/fridge/fridge'
+        })
+      }
+    })
+  },
+
+
+  barcodescan: function(){
+    let page = this
+    wx.scanCode({
+      success (res) {
+        console.log(res)
+        const barcode = res.result
+        wx.request({
+          url: `https://mxnzp.com/api/barcode/goods/details?barcode=${barcode}&app_id=zlcwkesmllkgvjbm&app_secret=NHlrMTd5c3JLYzU4M0dsTjl5YVp6UT09`,
+          success(res){
+            console.log(res.data.data)
+            // console.log(res.data.data.goodsName)
+            // console.log(res.data.data.brand)
+            const cn_item = res.data.data.goodsName
+            const cn_brand = res.data.data.brand
+            const item = (cn_item.split(`${cn_brand}`)).join("")
+            console.log(item)
+              wx.request({
+                url: `http://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=${item}`,
+                success: (res) => {
+                  // console.log(res.data.translateResult[0][0].tgt)
+                  const en_item = res.data.translateResult[0][0].tgt
+                  console.log(en_item)
+                  page.setData({
+                    "item.name": en_item
+                  })
+                }
+              })
+          }
         })
       }
     })
@@ -88,7 +124,8 @@ Page({
   onLoad: function (options) {
     const page = this
     let year =  new Date(Date.now()).getFullYear()
-    let month = new Date(Date.now()).getMonth()
+    let month = new Date(Date.now()).getMonth()+1
+    console.log(month)
     let date = new Date(Date.now()).getDate()
     page.setData({
       purchase_date: `${year}-${month}-${date}`

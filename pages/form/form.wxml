@@ -8,7 +8,8 @@
     <view class ="h1">➕Food 🥑🥩🥦</view>
     <view class="section">
       <view class="section__title">Item</view>
-      <input name="name" maxlength="40" value="{{name}}" placeholder="apple, eggs etc." />
+      <input value="{{item.name ? item.name : ''}}" name="name" maxlength="100"  placeholder="  Apple, eggs etc." />
+      <button class="barcode" bindtap="barcodescan">Or click to scan item barcode</button>
       <!-- change to the picker component for tags -->
       <!-- changed picker code (commented out below) to buttons -->
       <view class="section__title">Category</view>

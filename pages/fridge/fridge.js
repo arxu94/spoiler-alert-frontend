@@ -61,7 +61,7 @@ Page({
     wx.request({
       url: getApp().globalData.host + `/api/v1/foods`,
       success: function (response) {
-        console.log(response.data[0])
+        // console.log(response.data[0])
         const foods = response.data
         foods.forEach(food => {
           // Parse the dates
