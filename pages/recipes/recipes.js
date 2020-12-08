@@ -41,6 +41,13 @@ Page({
     })
   },
 
+  deleteRecipe: function() {
+    const recipe_id = this.getData().my_recipes.id
+    console.log(recipe_id)
+    wx.request({
+      url: 'api/v1/recipes/${recipe_id}',
+    })
+  },
   /**
    * Lifecycle function--Called when page hide
    */
