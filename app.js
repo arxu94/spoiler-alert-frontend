@@ -13,7 +13,10 @@ App({
         })
       }
     })
+
   },
+
+
   globalData: {
    host: 'http://localhost:3000/',
   //  host : 'https://spoiler-alert.wogengapp.cn/',

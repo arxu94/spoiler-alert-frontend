@@ -31,9 +31,12 @@ Page({
     })
   },
   
-   onLoad: function (options) {
+   onReady: function (options) {
+     let page = this
+    setTimeout(function () {
     const user = wx.getStorageSync('user');
-    this.setData({user});
-    this.getTips(user);
+    page.setData({user});
+    page.getTips(user);
+  }, 1000);
   }
 })
