@@ -45,7 +45,7 @@ Page({
   },
 
   addIcon: function(food) {
-    let icons = [{name: 'Meat and Fish', image: '/images/meat-icon.png'}, {name: 'Dairy', image: '/images/dairy-icon.png'}, {name: 'Fruits and Veggies', image: '/images/banana-icon.png'}, {name: 'Condiments', image: '/images/sauces-icon.png'}, {name: 'Eggs', image: '/images/eggs-icon.png'}, {name: 'Others'}];
+    let icons = [{name: 'Meat', image: '/images/meat-icon.png'}, {name: 'Dairy', image: '/images/dairy-icon.png'}, {name: 'Veggies', image: '/images/broccolli-icon.png'}, {name: 'Condiments', image: '/images/sauces-icon.png'}, {name: 'Eggs', image: '/images/eggs-icon.png'}, {name: 'Seafood', image: '/images/fish-icon-1.png'}, {name: 'Fruits', image: '/images/banana-icon.png'}, {name: 'Others', image: ''}];
 
     let icon = icons.find( ({ name }) =>  name === food.tag_list[0])
     if (icon) food["image_url"] = icon.image
