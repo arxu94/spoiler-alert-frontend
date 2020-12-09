@@ -2,7 +2,7 @@
 page {
   background-color: #FFF1E8;
   height: auto;
-  background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.3)), url(http://chuantu.xyz/t6/741/1607068577x2085490812.png);  background-repeat:no-repeat; 
+  /* background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.3)), url(http://chuantu.xyz/t6/741/1607068577x2085490812.png);  background-repeat:no-repeat;  */
   background-size: cover; 
   background-position: center;
   background-attachment: fixed;
@@ -12,6 +12,7 @@ page {
   width: 100%;
   text-align: center;
   white-space: nowrap;
+  height: 80vh;
 }
 
 .scroll_item {
@@ -21,12 +22,14 @@ margin: 0 1%;
 left: -2%;
 display: inline-block;
 border-radius: 20rpx !important ;
+border-bottom-left-radius: 20rpx;
+border-bottom-right-radius: 20rpx;
 overflow: hidden;
 transform: scale(0.9);
 box-shadow: 0 0 10px #ccc;
 vertical-align: top;
 top: 5%;
-height: 72vh;
+height: 65vh;
 background-color: #fff;
 }
 
@@ -68,26 +71,23 @@ background-color: #fff;
   padding: 30rpx 5% 30rpx 5%;
   float: left;
   width: 90%;
-  /* height: 20%; */
   border-bottom-left-radius: 20rpx;
   border-bottom-right-radius: 20rpx;
-  position: absolute;
   bottom: 120rpx;
   left: 0;
   z-index: 1;
   background: #fff;
-  word-wrap: break-word; 
+  /* word-wrap: break-word;  */
 }
 
 .proTitle {
   padding-top: 10px;
   font-size: 45rpx;
-  /* white-space: nowrap;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; */
-  color: #666;
+  text-overflow: ellipsis;
+  color: #333;
   line-height: 80rpx;
-  /* width: auto; */
   word-wrap: break-word;
 }
 
@@ -114,7 +114,7 @@ width: 95%;
 .ingredients-list {
   margin-left: 15px;
   margin-right: 15px;
-  background-color: rgba(196, 196, 196, 0.1);
+  /* background-color: rgba(196, 196, 196, 0.1); */
   border-radius: 2px;
   position: absolute;
   top: 80vh;
