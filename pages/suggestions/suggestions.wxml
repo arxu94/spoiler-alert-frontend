@@ -3,7 +3,7 @@
 <view class="h1">Now it's time to choose your recipe!</view>
 <scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;height:65vh" bindscroll="getSelectItem">
   <block wx:for="{{recipes}}"  wx:key="unique" wx:for-index="id" wx:for-item="item">
-    <view class="scroll_item {{item.selected ? 'selected' : ''}}" data-index='{{item.index}}' bindtap='selectProItem'>
+    <view class="scroll_item {{item.selected ? 'selected' : ''}}" data-index='{{item.index}}'>
       <view class='proImg'><image src="{{item.image}}" class="slide-image"  mode="widthFix"/></view>
       <view class='detailBox'>
       <view class='proTitle'>{{item.title}}</view>
