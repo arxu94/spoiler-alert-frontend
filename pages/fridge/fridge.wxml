@@ -7,9 +7,7 @@
   <view class="card-food" wx:key='index' wx:for="{{foods}}" wx:for-item="food">
     <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✔️" : "☐"}}</view>
     
-    <view>
-      <image class='icon' src="{{food.image_url}}" />
-    </view>
+    <image class="icon" src="{{food.image_url}}" />
     <view class="food-info">
       <view class="food-item-name">{{food.name}}</view>
       <view class="shelf-life {{food.expired ? 'expired' : ''}} {{food.warn ? 'warn' : ''}}">{{food.expired ? "Expired on: " : ""}} {{food.warn ? "Will expire on: " : ""}} {{food.warn || food.expired ? "" : "Expiration date: "}} {{food.expire_date}}</view>
@@ -19,7 +17,7 @@
       </view>
   </view>
   </view>
-      
-
+     
 <button class="generate" bindtap="createRecipe">Turn on Cooking Assistant</button>
+<!-- <button class="generate" bindtap="createRecipe">Turn on Cooking Assistant</button> -->
   

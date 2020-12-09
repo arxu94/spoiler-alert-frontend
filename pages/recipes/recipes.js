@@ -35,9 +35,11 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    const user_id = getApp().globalData.userId;
+    // const user_id = getApp().globalData.userId;
+    const user = wx.getStorageSync('user');
+    const user_id = user.id;
 
-    console.log(user_id)
+    console.log(user)
     wx.request({
       url: getApp().globalData.host +`api/v1/users/${user_id}/recipes`,
       success: (response) => {

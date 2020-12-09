@@ -8,6 +8,8 @@ App({
           method: "POST",
           data: { code: res.code },
           success: (res) => {
+            console.log('welcome user')
+            console.log(res)
             wx.setStorageSync('user', res.data.user)
           }
         })
