@@ -40,27 +40,23 @@ Page({
   // New Food Submission
   submit: function (e) {
     //...
-    console.log('data', e)
+    const user = wx.getStorageSync('user');
     let name = e.detail.value.name;
     let category = this.data.categories.array[this.data.categories.active].name;
     let purchase_date = this.data.purchase_date;
-    console.log("checking if tag is working", category)
+
     let food = {
       name: name,
       tag_list: category,
       purchase_date: purchase_date,
-      user_id: getApp().globalData.userId
+      user_id: user.id
     }
-
-    console.log("checking post api", food)
 
     wx.request({
       url: getApp().globalData.host + `api/v1/foods`,
       method: 'POST',
-      data: { food: food },
+      data: { food },
       success(res) {
-        console.log(res)
-        // redirect to index page when done
         wx.navigateTo({
           url: '/pages/fridge/fridge'
         })

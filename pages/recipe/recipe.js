@@ -18,7 +18,8 @@ Page({
   saveRecipe: function () {
     // data: {recipe: {user_id: 2, title: "", ingredient: '', instructions: ''}}
     //get the data
-    const user_id = getApp().globalData.userId
+    // const user_id = getApp().globalData.userId
+    const user = wx.getStorageSync('user')
     const title = this.data.title
     const ingredient = this.data.extendedIngredients
     const image = this.data.image
@@ -31,7 +32,7 @@ Page({
     const host = getApp().globalData.host
 
     const recipe = {
-      "user_id": user_id,
+      "user_id": user.id,
       "title": title.substring(0, 30) + "...",
       "ingredient": JSON.stringify(ingredient),
       "instructions": instructions,

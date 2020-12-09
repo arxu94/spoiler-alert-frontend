@@ -5,11 +5,7 @@
     "pages/form/form",
     "pages/recipe/recipe",
     "pages/recipes/recipes",
-    "pages/info/info",
-    "pages/scanner/scanner",
-    "pages/tips/tips",
-    "pages/suggestions/suggestions",
-    "pages/my_recipe/my_recipe"
+    "pages/suggestions/suggestions"
   ],
   "window":{
     "backgroundTextStyle":"light",

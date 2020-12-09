@@ -5,15 +5,18 @@
 <view class="banner">
   <view class="headers">
   <view class="h1"> Welcome to Spoiler Alert.</view> 
-  <view class="h2"> A handy helper to minimize your food waste by keeping track of your foods and when they are about to spoil.</view>
-  </view>
-    <view class="buttons">
-      <button class="one" style="padding: 60rpx;" bindtap="goToFridge">See all my foods</button>
-<!-- change to plus emoji -->
-      <button class="two" style="padding: 60rpx;" bindtap="goToForm">+</button>
-    </view>
-    <view class="buttons2">
-      <button class="one" style="padding: 60rpx;" bindtap="goToRecipes">My saved recipes</button>
-      <button class="one" style="padding: 60rpx;" bindtap="goToTips">My personalized tips</button>
-    </view>
+  <view class="h2"> Minimize your food waste by keeping track of your foods and when they are about to spoil.</view>
 </view>
+
+<view class="buttons">
+  <button class="one" style="padding: 30rpx;" bindtap="goToFridge">See all my foods</button>
+  <button class="two" style="padding: 30rpx;" bindtap="goToForm">+</button>
+  <button class="three" style="padding: 30rpx;" bindtap="goToRecipes">My saved recipes</button>
+</view>
+
+<view class="h2">Tip of the day:</view>
+<view wx:for-item="tips" class="h2">
+  {{tips.message}}
+</view>
+</view>
+      <!-- <button class="one" style="padding: 60rpx;" bindtap="goToTips">My personalized tips</button> -->
