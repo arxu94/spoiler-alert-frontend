@@ -25,7 +25,9 @@ Page({
       url: `${globalData.host}api/v1/recipes/${id}`,
       method: "GET",
       success: res => {
-        this.setData(res.data)
+        const result = res.data
+        result.ingredient = JSON.parse(result.ingredient)
+        this.setData(result)
       }
     })
   }

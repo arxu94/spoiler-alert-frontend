@@ -9,8 +9,8 @@
   <view class ="h2">Ready in: <text class="titles">{{cooking_time}}</text> minutes</view>
   <view class="h2">Ingredients:</view>
   <view wx:for="{{ingredient}}">
-    <!-- <view>- {{item.name}}, {{item.amount}} {{item.unit}}</view> -->
-    <view>- {{item}}</view>
+    <view>- {{item.name}}, {{item.amount}} {{item.unit}}</view>
+    <!-- <view>- {{item}}</view> -->
   </view>
   <view class ="h2" id="instructions">Here's how to make it:</view>
   <view class ="h3">{{instructions === null ? summary : instructions}}</view>
