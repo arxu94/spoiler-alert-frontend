@@ -1,4 +1,6 @@
 // pages/home/home.js
+import event from '../../utils/event'
+
 Page({
   data: {
   },
@@ -31,12 +33,20 @@ Page({
     })
   },
   
-   onReady: function (options) {
+   onLoad: function (options) {
      let page = this
-    setTimeout(function () {
+    event.on("hasUserId", page, page.setUser)
+    event.on("hasUserId", page, page.setTips)
+  },
+
+  setUser:function(){
     const user = wx.getStorageSync('user');
-    page.setData({user});
-    page.getTips(user);
-  }, 1000);
+    this.setData({user});
+  },
+
+  setTips: function(){
+    this.setData({
+      tips: wx.getStorageSync('tips')
+    })
   }
 })
