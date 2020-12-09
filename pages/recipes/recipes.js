@@ -43,7 +43,7 @@ Page({
     wx.request({
       url: getApp().globalData.host +`api/v1/users/${user_id}/recipes`,
       success: (response) => {
-      console.log(response.data.recipes)
+      console.log("checking my recipes" ,response)
       const my_recipes = response.data.recipes
       const word_test_whatever = my_recipes[0].title.substring(0, 30)
       console.log(word_test_whatever)
