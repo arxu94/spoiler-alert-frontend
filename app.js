@@ -1,3 +1,5 @@
+import event from 'utils/event';
+
 App({
   onLaunch: function () {
     const host = this.globalData.host
@@ -11,6 +13,8 @@ App({
             console.log('welcome user')
             console.log(res)
             wx.setStorageSync('user', res.data.user)
+            wx.setStorageSync('tips', res.data.tips)
+            event.emit("hasUserId")
           }
         })
       }
@@ -20,8 +24,8 @@ App({
 
 
   globalData: {
-  //  host: 'http://localhost:3000/',
-   host : 'https://spoiler-alert.wogengapp.cn/',
+   host: 'http://localhost:3000/',
+  //  host : 'https://spoiler-alert.wogengapp.cn/',
     recipes: [
     ],
     foods: [
