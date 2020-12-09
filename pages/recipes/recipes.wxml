@@ -1,5 +1,10 @@
 <view class="h1">Recipes that you saved</view>
 
+<view class="searchbar">
+  <!-- bindconfirm is another bind we can use but only when user confirms -->
+  <input name="query" type="text" placeholder="Search an ingredient" bindinput="searchRecipe"></input>
+</view>
+
 <view class="body">
   <view bindtap="goToMyRecipe" wx:for="{{my_recipes}}" data-id="{{item.id}}">
     <view class="recipe-card">

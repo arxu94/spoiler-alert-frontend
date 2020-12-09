@@ -24,6 +24,23 @@ Page({
   
   },
 
+  searchRecipe: function(e) {
+    console.log(e)
+    const query = e.detail.value
+    const base_url = getApp().globalData.host + 'api/v1/user/'
+    const user = 44
+
+    const page = this
+    wx.request({
+      url: base_url + user + '/recipes?query=' + query,
+      success: function (response) {
+       console.log('123',response)
+        const recipes = response.data.recipes
+        page.setData({ recipes })
+      }
+    })
+    wx.request()
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
