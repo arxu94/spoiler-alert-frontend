@@ -25,8 +25,8 @@ App({
 
 
   globalData: {
-   host: 'http://localhost:3000/',
-  //  host : 'https://spoiler-alert.wogengapp.cn/',
+  //  host: 'http://localhost:3000/',
+   host : 'https://spoiler-alert.wogengapp.cn/',
     recipes: [
     ],
     foods: [
