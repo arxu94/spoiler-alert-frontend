@@ -9,163 +9,97 @@ page {
 }
 
 .scroll-view_H{
-
   width: 100%;
-
   text-align: center;
-
   white-space: nowrap;
-
 }
 
 .scroll_item {
-
 position: relative;
-
 width: 84%;
-
 margin: 0 1%;
-
 left: -2%;
-
 display: inline-block;
-
 border-radius: 20rpx !important ;
-
 overflow: hidden;
-
 transform: scale(0.9);
-
 box-shadow: 0 0 10px #ccc;
-
 vertical-align: top;
-
 top: 5%;
-
-height: 71%;
-
+height: 72vh;
 background-color: #fff;
-
 }
 
 .scroll_item:first-child{
-
   margin-left: 8%;
-
   left: 0;
-
 }
 
 .scroll_item:last-child{
-
   margin-right: 8%;
-
    left: 0;
-
 }
 
 .scroll_item.selected{
-
    transform: scale(1);
    box-shadow: 0 0 5rpx #ED984A;
    border: solid 5px #ED984A;
-
 }
 
 .scroll_item .proImg{
-
-  border-top-left-radius: 20rpx;
-
+  /* border-top-left-radius: 20rpx;
   border-top-right-radius: 20rpx;
-
   width: 100%;
-
-  max-height: 300rpx;
-
+  max-height: 200rpx;
   position: absolute;
-
   top: 0;
-
   left: 0;
-
-  z-index: 0;
-
+  z-index: 0; */
 }
 
 .scroll_item image {
-
-  width: 100%;
-
+  height: 50vh;
   float: left;
-
   border-top-left-radius: 20rpx;
-
   border-top-right-radius: 20rpx;
-
 }
 
 .detailBox {
-
-  padding: 10rpx 5% 30rpx 5%;
-
+  padding: 30rpx 5% 30rpx 5%;
   float: left;
-
   width: 90%;
-  height: 20%;
+  /* height: 20%; */
   border-bottom-left-radius: 20rpx;
-
   border-bottom-right-radius: 20rpx;
-
   position: absolute;
-
-  bottom: 0;
-
+  bottom: 120rpx;
   left: 0;
-
   z-index: 1;
-
   background: #fff;
   word-wrap: break-word; 
-
 }
 
 .proTitle {
   padding-top: 10px;
   font-size: 45rpx;
-  white-space: nowrap;
+  /* white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
   color: #666;
-
-
   line-height: 80rpx;
-
-  /* overflow: hidden; */
-
-  /* text-overflow: ellipsis; */
-  /* word-wrap: break-word; */
-  width: auto;
-  /* display: inline-block;
-  white-space: nowrap; */
-
+  /* width: auto; */
+  word-wrap: break-word;
 }
 
 .proDec {
-
   font-size: 30rpx;
-
   color: #999;
-
   line-height: 50rpx;
-
 }
 
 .detailLink{
-  
   color: #ED984A;
-
   font-size: 30rpx;
-
 }
 
 .h1 {
@@ -178,9 +112,12 @@ width: 95%;
 }
 
 .ingredients-list {
-  margin: -85px 15px 10px 15px ;
+  margin-left: 15px;
+  margin-right: 15px;
   background-color: rgba(196, 196, 196, 0.1);
   border-radius: 2px;
+  position: absolute;
+  top: 90vh;
 }
 
 .selected-ingredients {
