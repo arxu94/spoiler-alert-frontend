@@ -2,7 +2,7 @@
 
 <view class="searchbar">
   <!-- bindconfirm is another bind we can use but only when user confirms -->
-  <input name="query" type="text" placeholder="Search an ingredient" bindinput="searchRecipe"></input>
+  <input name="query" type="text" placeholder="Search an ingredient" bindconfirm="searchRecipe"></input>
 </view>
 
 <view class="body">
