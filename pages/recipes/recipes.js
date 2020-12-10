@@ -24,6 +24,28 @@ Page({
   
   },
 
+  searchRecipe: function(e) {
+    console.log(e)
+    const query = e.detail.value
+    const base_url = getApp().globalData.host + 'api/v1/users/'
+    const user = wx.getStorageSync('user')
+    const userId = user.id
+
+    const page = this
+    wx.request({
+      url: base_url + userId + '/recipes?query=' + query,
+      success: function (response) {
+       console.log('123',response)
+        const my_recipes = response.data.recipes
+        console.log(my_recipes)
+        // recipes.forEach(recipe => {
+        //   this.setData(title);
+        //   this.setData(cooking_time);
+        page.setData({ my_recipes })
+      }
+    })
+    wx.request()
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */

@@ -9,7 +9,7 @@ Page({
     selectedFoodIndex: 0,
     categories: {
       active: 0,
-      array: [{name: 'Meat and Fish', image: '/images/meat-icon.png'}, {name: 'Dairy', image: '/images/dairy-icon.png'}, {name: 'Fruits and Veggies', image: '/images/banana-icon.png'}, {name: 'Condiments', image: '/images/sauces-icon.png'}, {name: 'Eggs', image: '/images/eggs-icon.png'}, {name: 'Others'}]
+      array: [{name: 'Meat', image: '/images/meat-icon.png'}, {name: 'Dairy', image: '/images/dairy-icon.png'}, {name: 'Veggies', image: '/images/broccolli-icon.png'}, {name: 'Condiments', image: '/images/sauces-icon.png'}, {name: 'Eggs', image: '/images/eggs-icon.png'}, {name: 'Seafood', image: '/images/fish-icon-1.png'}, {name: 'Fruits', image: '/images/banana-icon.png'}, {name: 'Others', image: '/images/others-icon.png'}]
     }
   },
 
@@ -24,10 +24,18 @@ Page({
     })
   },
 
+  bindDateChange2: function (e) {
+    console.log('Picker is being used, the date is', e.detail.value)
+    this.setData({
+      // purchase_date: e.detail.value,
+      expire_date: e.detail.value
+    })
+  },
   bindDateChange: function (e) {
     console.log('Picker is being used, the date is', e.detail.value)
     this.setData({
-      purchase_date: e.detail.value
+      purchase_date: e.detail.value,
+      // expire_date: e.detail.value
     })
   },
 

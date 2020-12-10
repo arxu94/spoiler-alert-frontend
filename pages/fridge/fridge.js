@@ -22,8 +22,10 @@ Page({
   },
 
   getFoods: function() {
+    const user = wx.getStorageSync('user');
+    const user_id = user.id;
     wx.request({
-      url: getApp().globalData.host + `/api/v1/foods`,
+      url: getApp().globalData.host + `api/v1/foods?user_id=${user_id}`,
       success: (response) => {
         const foods = response.data
         foods.forEach(food => {
@@ -45,11 +47,11 @@ Page({
   },
 
   addIcon: function(food) {
-    let icons = [{name: 'Meat and Fish', image: '/images/meat-icon.png'}, {name: 'Dairy', image: '/images/dairy-icon.png'}, {name: 'Fruits and Veggies', image: '/images/banana-icon.png'}, {name: 'Condiments', image: '/images/sauces-icon.png'}, {name: 'Eggs', image: '/images/eggs-icon.png'}, {name: 'Others'}];
+    let icons = [{name: 'Meat', image: '/images/meat-icon.png'}, {name: 'Dairy', image: '/images/dairy-icon.png'}, {name: 'Veggies', image: '/images/broccolli-icon.png'}, {name: 'Condiments', image: '/images/sauces-icon.png'}, {name: 'Eggs', image: '/images/eggs-icon.png'}, {name: 'Seafood', image: '/images/fish-icon-1.png'}, {name: 'Fruits', image: '/images/banana-icon.png'}, {name: 'Others', image: '/images/others-icon.png'}];
 
     let icon = icons.find( ({ name }) =>  name === food.tag_list[0])
     if (icon) food["image_url"] = icon.image
-    else food["image_url"] = "/images/banana-icon.png"
+    else food["image_url"] = "/images/others-icon.png"
   },
 
   changeBoolean: function(event){

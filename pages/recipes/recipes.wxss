@@ -3,6 +3,18 @@ page {
 
 }
 
+.searchbar {
+  color: #555;
+  margin-bottom: 40rpx;
+  padding: 10px;
+  width: 340px;
+  height: 20px;
+  text-align: left;
+  font-weight: lighter;
+  border-radius: 5px;
+  background-color: #E7DEC8;
+}
+
 .body {
   margin: 0 40rpx;
 }
