@@ -7,7 +7,7 @@
 <view class="body">
 
   <view class ="h2">Ready in: <text class="titles">{{cooking_time}}</text> minutes</view>
-  <view class="h2">Ingredients:</view>
+  <view class="h2 ingredients">Ingredients:</view>
   <view wx:for="{{ingredient}}">
     <view>- {{item.name}}, {{item.amount}} {{item.unit}}</view>
     <!-- <view>- {{item}}</view> -->
