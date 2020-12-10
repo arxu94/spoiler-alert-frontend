@@ -14,7 +14,7 @@
   <button class="three" style="padding: 30rpx;" bindtap="goToRecipes">My saved recipes</button>
 </view>
 
-<view class="h2 tip">Tip of the day:</view>
+<view class="h2 tip-title">Tip of the day:</view>
 <view wx:for-item="tips" class="h2 tip">{{tips.message || tips}}</view>
 </view>
       <!-- <button class="one" style="padding: 60rpx;" bindtap="goToTips">My personalized tips</button> -->

@@ -92,7 +92,7 @@ Page({
             const item = (cn_item.split(`${cn_brand}`)).join("")
             console.log(item)
               wx.request({
-                url: `http://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=${item}`,
+                url: `https://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=${item}`,
                 success: (res) => {
                   // console.log(res.data.translateResult[0][0].tgt)
                   const en_item = res.data.translateResult[0][0].tgt
