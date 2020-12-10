@@ -51,6 +51,8 @@ page {
 }
 
 .card-info {
+  display: flex;
+  flex-direction: column;
   margin: 10rpx 0 0 18rpx;
 }
 .card-info .titles {
@@ -60,8 +62,11 @@ page {
 .image {
   border-radius: 4rpx;
   height: 220rpx;
-  flex: 1 1 300rpx;
+  flex: 0 1 300rpx;
   margin: 10rpx;
+}
+.btn-delete {
+  /* margin: 20rpx 0 0 300rpx; */
 }
 
 .delete-icon {
@@ -69,7 +74,7 @@ page {
   height: 15px;
   color: white;
   filter: brightness(80%);
-  margin: 20rpx 0 0 300rpx;
+ 
   /* display: flex;
   flex-direction: row;
   align-items: center;

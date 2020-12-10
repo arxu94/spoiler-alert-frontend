@@ -10,11 +10,11 @@
 
 <view class="buttons">
   <button class="one" style="padding: 30rpx;" bindtap="goToFridge">See all my foods</button>
-  <button class="two" style="padding: 30rpx;" bindtap="goToForm">+</button>
+  <!-- <button class="two" style="padding: 30rpx;" bindtap="goToForm">+</button> -->
   <button class="three" style="padding: 30rpx;" bindtap="goToRecipes">My saved recipes</button>
 </view>
 
-<view class="h2">Tip of the day:</view>
-<view wx:for-item="tips" class="h2">{{tips.message || tips}}</view>
+<view class="h2 tip">Tip of the day:</view>
+<view wx:for-item="tips" class="h2 tip">{{tips.message || tips}}</view>
 </view>
       <!-- <button class="one" style="padding: 60rpx;" bindtap="goToTips">My personalized tips</button> -->
