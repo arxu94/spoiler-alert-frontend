@@ -30,5 +30,10 @@ Page({
         this.setData(result)
       }
     })
+  },
+  backToHome: function(){ 
+    wx.navigateTo({
+      url: '/pages/home/home'
+    })
   }
 })
