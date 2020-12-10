@@ -14,5 +14,5 @@
   </view>
   <view class ="h2" id="instructions">Here's how to make it:</view>
   <view class ="h3">{{instructions === null ? summary : instructions}}</view>
-
+  <button class="btn-to-home" bindtap="backToHome">Home</button>
 </view>
