@@ -13,7 +13,7 @@ Page({
       user = wx.getStorageSync('user');
       console.log('onShow -- 2', user)
       this.getTips(user);
-    }, 500);
+    }, 800);
   },
   
   goToFridge: function() {
@@ -38,7 +38,6 @@ Page({
     wx.request({
       url: getApp().globalData.host + `api/v1/tips/${user.id}`,
       success: (response) => {
-        console.log(response)
         const tips = response.data
         this.setData({ tips })
       }
@@ -57,14 +56,6 @@ Page({
   },
 
   setTips: function(){
-    // let user = wx.getStorageSync('user');
-    // until (user) 
-    // if (!user) user = wx.getStorageSync('user');
-    // wx.request({
-    //   url: '',
-    //   data: {user_id: user.id},
-    //   success: res => console.log(res);
-    // })
     this.setData({
       tips: wx.getStorageSync('tips')
     })
