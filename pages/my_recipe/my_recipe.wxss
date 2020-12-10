@@ -2,6 +2,7 @@
 /* pages/recipe/recipe.wxss */
 page {
   background-color: #FFF1E8;
+  background: linear-gradient(50deg, #FFF1E8 7%, rgba(255, 166, 0, 0.293));
   height: auto;
   /* background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(http://chuantu.xyz/t6/741/1607068577x2085490812.png); */
   background-repeat: no-repeat;
@@ -18,7 +19,7 @@ page {
 
 .body {
   margin: 10rpx 50rpx;
-  padding: 14rpx; 
+  padding: 15rpx; 
   /* background-color: rgba(212, 208, 208, 0.897); */
   /* border-radius: 12rpx; */
 }
@@ -41,6 +42,11 @@ page {
   color: black;
   /* background-color: rgba(212, 208, 208, 0.897);
   border-radius: 12rpx; */ 
+  margin: 0 0 30rpx 0;
+}
+
+.ingredients {
+  font-weight: bolder;
 }
 
 #instructions {
