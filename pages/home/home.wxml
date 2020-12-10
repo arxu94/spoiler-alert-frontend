@@ -15,8 +15,6 @@
 </view>
 
 <view class="h2">Tip of the day:</view>
-<view wx:for-item="tips" class="h2">
-  {{tips}}
-</view>
+<view wx:for-item="tips" class="h2">{{tips.message || tips}}</view>
 </view>
       <!-- <button class="one" style="padding: 60rpx;" bindtap="goToTips">My personalized tips</button> -->
