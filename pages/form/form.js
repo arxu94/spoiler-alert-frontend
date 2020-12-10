@@ -52,11 +52,13 @@ Page({
     let name = e.detail.value.name;
     let category = this.data.categories.array[this.data.categories.active].name;
     let purchase_date = this.data.purchase_date;
+    let expire_date = this.data.expire_date;
 
     let food = {
       name: name,
       tag_list: category,
       purchase_date: purchase_date,
+      expire_date: expire_date,
       user_id: user.id
     }
 
