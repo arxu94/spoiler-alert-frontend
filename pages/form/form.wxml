@@ -23,6 +23,15 @@
       </view>
       </picker>
 
+    <block wx:if="{{categories.active == 7}}">
+      <view class="section__title purchase-date">Expiry date</view>
+      <picker mode="date" value="{{expire_date}}" start="01-01-2020" end="31-12-2030" bindchange="bindDateChange2">
+        <view class="picker">
+        Expires on: {{expire_date}}
+        </view>
+      </picker>
+      </block>
+
       <!-- <input name="purchase_date" value="{{purchase_date}}" placeholder="Date/Month/Year" /> -->
       <button form-type="submit" class='add-btn'>Put in fridge!</button>
     </view>
