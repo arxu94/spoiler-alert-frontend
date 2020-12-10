@@ -70,6 +70,8 @@ Page({
       url: getApp().globalData.host + `api/v1/recipe_details?id=${page.data.id}`,
       success: function(res) {
         const recipe = res.data.result
+        console.log(res)
+        console.log(recipe)
         console.log(recipe)
         page.setData(recipe)
       }
