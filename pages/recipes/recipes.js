@@ -36,12 +36,12 @@ Page({
       url: base_url + userId + '/recipes?query=' + query,
       success: function (response) {
        console.log('123',response)
-        const recipes = response.data.recipes
-        console.log(recipes)
+        const my_recipes = response.data.recipes
+        console.log(my_recipes)
         // recipes.forEach(recipe => {
         //   this.setData(title);
         //   this.setData(cooking_time);
-        page.setData({ recipes })
+        page.setData({ my_recipes })
       }
     })
     wx.request()
