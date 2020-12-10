@@ -5,6 +5,7 @@ App({
     const host = this.globalData.host
     wx.login({
       success: (res) => {
+        console.log(res.code);
         wx.request({
           url: host + "login",
           method: "POST",
