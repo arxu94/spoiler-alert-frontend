@@ -24,10 +24,12 @@ Page({
   getFoods: function() {
     const user = wx.getStorageSync('user');
     const user_id = user.id;
+    console.log(user_id)
     wx.request({
       url: getApp().globalData.host + `api/v1/foods?user_id=${user_id}`,
       success: (response) => {
         const foods = response.data
+        console.log(foods)
         foods.forEach(food => {
           this.addExpiration(food);
           this.addIcon(food);
