@@ -2,7 +2,7 @@
 /* pages/recipe/recipe.wxss */
 page {
   background-color: #FFF1E8;
-  background: linear-gradient(50deg, #FFF1E8 7%, rgba(255, 166, 0, 0.293));
+  background: linear-gradient(125deg, #FFF1E8 35%, rgba(255, 166, 0, 0.293));
   height: auto;
   /* background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(http://chuantu.xyz/t6/741/1607068577x2085490812.png); */
   background-repeat: no-repeat;

@@ -1,10 +1,10 @@
 <view class="h1">Recipes that you saved</view>
-
-<view class="searchbar">
-  <!-- bindconfirm is another bind we can use but only when user confirms -->
-  <input name="query" type="text" placeholder="Search an ingredient" bindconfirm="searchRecipe"></input>
+<view class="banner">
+  <view class="searchbar">
+    <!-- bindconfirm is another bind we can use but only when user confirms -->
+    <input name="query" type="text" placeholder="Search an ingredient" bindconfirm="searchRecipe"></input>
+  </view>
 </view>
-
 <view class="body">
   <view bindtap="goToMyRecipe" wx:for="{{my_recipes}}" data-id="{{item.id}}">
     <view class="recipe-card">
@@ -12,7 +12,7 @@
       <view class="card-info">
         <view class ="h2"><text class="titles">{{item.title}}</text></view>
         <view class ="h2">Need: <text class="titles">{{item.cooking_time}}</text> minutes</view>
-        <view bindtap="deleteRecipe" class="btn-delete" data-id="{{item.id}}">Delete</view>
+        <view bindtap="deleteRecipe" class="btn-delete" data-id="{{item.id}}"><image class='delete-icon' src="/images/delete-icon.png" /></view>
       </view>
     </view>
   </view>
