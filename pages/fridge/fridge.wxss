@@ -9,12 +9,12 @@ page {
   /* padding: 0 32rpx; */
   width: 100%;
   height: 120rpx;
-  /* text-align: center; */
+  text-align: center;
   margin: 20px;
   margin-top: 8px;
   margin-bottom: 0;
   font-weight: bold;
-  font-size: 45rpx;
+  font-size: 23px;
   text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
   /* color: black; */
 }
@@ -68,7 +68,7 @@ page {
   border-radius: 10rpx;
   color: rgb(241, 241, 241);
   background-color: #F88B26;
-  
+  text-align: center;
 }
 
 .body{
@@ -101,7 +101,7 @@ page {
 }
 
 .toggle {
-  font-size: 45rpx;
+  font-size: 50rpx;
   margin-right: 10rpx;
  color: #F88B26;
 }
@@ -113,10 +113,10 @@ page {
 
 .icon {
   height: 75%;
-  width: 40px;
+  width: 50px;
   object-fit: cover;
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 13px;
 }
 
 .shelf-life {
@@ -131,6 +131,7 @@ page {
   margin-bottom: 80rpx;
   background-color: #F88B26;
   color: rgb(241, 241, 241);
+  text-align: center;
 }
 
  /* .delete-button {
@@ -147,8 +148,8 @@ page {
  }, */
 
 .delete-icon {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   color: white;
   filter: brightness(80%);
   display: flex;
@@ -156,5 +157,5 @@ page {
   align-items: center;
   justify-content: center;
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 10px;
 }

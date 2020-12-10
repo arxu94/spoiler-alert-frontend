@@ -5,7 +5,7 @@
 </view>
 <view class="body">
   <view class="card-food" wx:key='index' wx:for="{{foods}}" wx:for-item="food">
-    <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✔️" : "☐"}}</view>
+    <view bindtap="changeBoolean" class="toggle" data-id="{{food.id}}">{{food.status ? "✔️" : "◯"}}</view>
     
     <image class="icon" src="{{food.image_url}}" />
     <view class="food-info">
