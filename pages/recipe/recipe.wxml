@@ -7,7 +7,7 @@
 <view class="body">
 
   <view class ="h2">Ready in: <text class="titles">{{readyInMinutes}}</text> minutes</view>
-  <view class="h2">Ingredients:</view>
+  <view class="h2 ingredients">Ingredients:</view>
   <view wx:for="{{extendedIngredients}}">
     <view>- {{item.name}}, {{item.amount}} {{item.unit}}</view>
   </view>
@@ -18,4 +18,4 @@
 
 </view>
 
-<button bindtap="saveRecipe" class='button-save-recipe' data-id="{{id}}">Save this recipe</button>
+<button bindtap="saveRecipe" class='btn-save-recipe' data-id="{{id}}">Save this recipe</button>
