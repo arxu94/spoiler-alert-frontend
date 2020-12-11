@@ -78,6 +78,14 @@ Page({
   barcodescan: function(){
     let page = this
     wx.scanCode({
+      fail(res){
+        console.log("fail!!", res)
+        wx.showToast({
+          title: 'Error',
+          image: '../../images/error.png',
+          duration: 500
+        })   
+      },
       success (res) {
         console.log(res)
         const barcode = res.result
@@ -100,6 +108,11 @@ Page({
                   page.setData({
                     "item.name": en_item
                   })
+                  wx.showToast({
+                    title: 'Success',
+                    icon: 'success',
+                    duration: 500
+                  })                  
                 }
               })
           }
