@@ -8,7 +8,9 @@
 <view class="body">
   <view bindtap="goToMyRecipe" wx:for="{{my_recipes}}" data-id="{{item.id}}">
     <view class="recipe-card">
-      <image class='image' src="{{item.image}}"></image>
+      <view class="image-wrapper">
+        <image class='image' mode="aspectFill" src="{{item.image}}"></image>
+      </view>
       <view class="card-info">
         <view class ="h2"><text class="titles">{{item.title}}</text></view>
         <view class ="h2">Need: <text class="titles">{{item.cooking_time}}</text> minutes</view>

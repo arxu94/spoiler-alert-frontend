@@ -19,3 +19,4 @@
 </view>
 
 <button bindtap="saveRecipe" class='btn-save-recipe' data-id="{{id}}">Save this recipe</button>
+<button class="btn-to-home" bindtap="backToHome">Home</button>
