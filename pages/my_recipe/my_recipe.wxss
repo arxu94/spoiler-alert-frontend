@@ -61,7 +61,7 @@ page {
 .btn-to-home {
   margin-left: auto;
   margin-right: 15px;
-  margin-bottom: -25px;
+  margin-bottom: 25px;
   font-size: 15px;
   padding: 10px;
   width: 230rpx;
