@@ -1,4 +1,5 @@
 // pages/fridge/fridge.js
+const globalData = getApp().globalData
 Page({
 
   data: {
@@ -19,6 +20,8 @@ Page({
   onReady: function () {},
   onShow: function () {
     this.getFoods()
+    console.log("im at on show", globalData.foods)
+    globalData.foods = []
   },
 
   getFoods: function() {
@@ -80,18 +83,22 @@ Page({
     const items = this.data.foods.filter(element => element.status === true);
     let query = "?search="
     if (items.length === 1) {
+      console.log(items)
       query += `${items[0].name},`
       getApp().globalData.foods = [items[0].name]
+      console.log(query)
     } else {
     // items.forEach((item) => {
     // })
     // query += `+${item.name},`
       for (let index = 0; index < items.length; index++) {
         const item = items[index];
+        console.log(item)
         query += `+${item.name},`
         getApp().globalData.foods.push(item.name)
       }
     }
+    console.log(query)
     wx.request({
       url: getApp().globalData.host + `api/v1/find_recipes${query}`,
       success: function (response) {
