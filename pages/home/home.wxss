@@ -1,31 +1,26 @@
 /* pages/home/home.wxss */
 page {
-  /* linear-gradient: (rgba(0,0,0,0),rgba(0,0,0,0)); */
-  /* background-image: https://img.ivsky.com/img/tupian/pre/201912/10/nangua-006.jpg;   */
   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url(https://img.ivsky.com/img/tupian/pre/201912/10/nangua-006.jpg);  background-repeat:no-repeat; 
   background-size: cover; 
   background-position: center;
   background-attachment: fixed;
+  padding: 160rpx 32rpx;
+  box-sizing: border-box;
 }
-.headers {
-  margin-left: 12px;
-}
+
 .h1 {
-  margin-top: 140rpx;
   text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
-  font-size: 70rpx;
+  font-size: 72rpx;
   color: white;
   font-weight: bolder;
-  margin-bottom: 25rpx;
 }
 
 .h2{
-  margin-top: 45rpx;
-  font-size: 45rpx;
+  margin: 32rpx 0;
+  font-size: 36rpx;
   text-shadow: 1rpx 1rpx 5rpx rgba(0,0,0,0.2);
   color: #ffffff;
-  margin-bottom: 25rpx;
-  margin-top: 50rpx;
+  /* margin-top: 50rpx; */
 }
 
 .banner {
@@ -45,46 +40,21 @@ page {
   justify-content: space-between;
 }
 
-.buttons > .one {
-  display: flex;
+.btn-one {
   background-color: #F88B26;
   color: white;
   /* height: 120px; */
-  width: 250rpx;
-  height: 250rpx;
-  border: solid 5rpx #ED984A;
+  height: 120rpx;
+  width: 100% !important;
+  margin: 32rpx 0 !important;
+  /* border: solid 5rpx #ED984A; */
   /* box-shadow: 0 0 4rpx; */
-  box-shadow: 0 0 5rpx #ED984A;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  font-size: 36rpx;
+  font-weight: normal;
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35rpx;
-}
-.buttons > .two {
-  display: flex;
-  background-color: #F88B26;
-  color: white;
-  margin: 0 40rpx;
-  font-size: 150rpx;
-  width: 250rpx;
-  height: 250rpx;
-  justify-content: center;
-  align-items: center; 
-  border: solid 5rpx #ED984A;
-  box-shadow: 0 0 5rpx #ED984A;
-}
-.buttons > .three {
-  display: flex;
-  background-color: #F88B26;
-  color: white;
-  /* height: 120px; */
-  width: 250rpx;
-  height: 250rpx;
-  border: solid 5rpx #ED984A;
-  /* box-shadow: 0 0 4rpx; */
-  box-shadow: 0 0 5rpx #ED984A;
-  justify-content: center;
-  align-items: center;
-  font-size: 35rpx;
 }
 
 .tip-title {
