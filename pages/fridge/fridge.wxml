@@ -19,6 +19,9 @@
         <image class='delete-icon' src="/images/delete-icon.png" />
       </view>
   </view>
+  <view class="home-button" bindtap="backToHome">
+    <image class='home-button-icon' src="/images/ic-home.png"/>
+    </view>
   </view>
      
 <!-- <view class="btn-to-form" bindtap="createRecipe">Turn on Cooking Assistant</view> -->

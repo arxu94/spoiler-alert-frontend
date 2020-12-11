@@ -178,3 +178,28 @@ page {
   justify-content: space-between;
   padding: 32rpx 0;
 }
+
+.home-button {
+  margin: auto 0;
+  border: solid 4rpx #f8983e;
+  box-shadow: 0 0 8rpx rgba(0,0,0,0.3);
+  border-radius: 10rpx;
+  color: rgb(241, 241, 241);
+  background-color: #F88B26;
+  text-align: center;
+  display: block;
+  margin: auto;
+  width:20%;
+  border-radius: 50%;
+  position: sticky;
+  flex-wrap: wrap;
+  z-index: 1;
+  bottom: 0;
+}
+
+.home-button-icon {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  align-items: center;
+}

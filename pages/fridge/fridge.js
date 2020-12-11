@@ -138,4 +138,10 @@ Page({
   onShareAppMessage: function () {
 
   },
+
+  backToHome: function(){ 
+    wx.redirectTo({
+      url: '/pages/home/home'
+    })
+  }
 });
