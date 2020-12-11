@@ -67,9 +67,17 @@ Page({
       method: 'POST',
       data: { food },
       success(res) {
-        wx.navigateTo({
-          url: '/pages/fridge/fridge'
-        })
+        if (res.data.error == "content not ok"){
+          wx.showToast({
+            title: 'Error',
+            image: '../../images/error.png',
+            duration: 1500
+          }) 
+        } else {
+          wx.navigateTo({
+            url: '/pages/fridge/fridge'
+          })
+        }
       }
     })
   },
@@ -83,7 +91,7 @@ Page({
         wx.showToast({
           title: 'Error',
           image: '../../images/error.png',
-          duration: 500
+          duration: 1500
         })   
       },
       success (res) {

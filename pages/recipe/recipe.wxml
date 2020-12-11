@@ -21,6 +21,6 @@
 <button bindtap="saveRecipe" class='btn-save-recipe' data-id="{{id}}">Save this recipe</button>
 <!-- <button class="back-button" bindtap="backToSuggestions">Go back</button> -->
 
-<view class="go-back-button" bindtap="backToSuggestions">
-    <image class='go-back-icon' src="/images/go-back-icon.png"/>
+<view class="home-button" bindtap="backToSuggestions">
+    <image class='home-button-icon' style="padding-top: 20rpx;" src="/images/go-back-icon.png"/>
     </view>
