@@ -17,7 +17,7 @@
         <button class="btn-category {{categories.active == index ? 'btn-active' : ''}}" wx:for="{{categories.array}}" bindtap="toggleActiveCategory" data-index="{{index}}"> <image class='icon' src="{{item.image}}"></image> <view class="item-name">{{item.name}}</view> </button>
       </view>
       <view class="section__title purchase-date">Purchase date</view>
-      <picker mode="date" value="{{purchase_date}}" start="01-01-2020" end="31-12-2030" bindchange="bindDateChange">
+      <picker mode="date" value="{{purchase_date}}" start="2020-01-01" end="2030-12-31" bindchange="bindDateChange">
       <view class="picker">
       Purchased on: {{purchase_date}}
       </view>
@@ -25,7 +25,7 @@
 
     <block wx:if="{{categories.active == 7}}">
       <view class="section__title purchase-date">Expiry date</view>
-      <picker mode="date" value="{{expire_date}}" start="01-01-2020" end="31-12-2030" bindchange="bindDateChange2">
+      <picker mode="date" value="{{expire_date}}" start="2020-01-01" end="2030-12-31" bindchange="bindDateChange2">
         <view class="picker">
         Expires on: {{expire_date}}
         </view>

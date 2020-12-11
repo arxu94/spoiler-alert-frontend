@@ -5,8 +5,8 @@ page {
 
 }
 .banner {
-  margin-left: 50rpx;
-  width: 87%;
+  margin-left: 32rpx;
+  width: 92%;
 }
 
 .searchbar {
@@ -22,13 +22,13 @@ page {
   box-shadow: 0rpx 0 4rpx rgba(0,0,0,0.1);
 }
 
-.body {
+/* .body {
   margin: 0 40rpx;
-}
+} */
 
 .h1 {
   height: 120rpx;
-  margin: 20rpx 0 20rpx 70rpx;
+  margin: 20rpx 0 20rpx 38rpx;
   font-weight: bold;
   font-size: 55rpx;
   text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
@@ -46,7 +46,7 @@ page {
   margin: 30rpx;
   padding: 0 10rpx 4rpx 0;
   border: solid rgba(216, 216, 216, 0.836) 2rpx;
-  border-radius: 8rpx;
+  border-radius: 15rpx;
   box-shadow: 1rpx 0 10rpx rgba(0,0,0,0.3);
 }
 
@@ -63,11 +63,13 @@ page {
   border-radius: 4rpx;
   height: 220rpx;
   flex: 0 1 300rpx;
-  margin: 10rpx;
+  margin: 10rpx 10rpx 0 10rpx;
   width: 30vw;
 }
 .btn-delete {
   /* margin: 20rpx 0 0 300rpx; */
+  margin-left: auto;
+  padding: 10rpx;
 }
 
 .delete-icon {
