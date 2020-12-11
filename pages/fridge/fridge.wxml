@@ -1,8 +1,10 @@
 <!--pages/fridge/fridge.wxml-->
 <view class="header">
   <view class="h1">Here's what's in your fridge</view>
-  <view class="btn-to-form" bindtap="goToForm">Add new item</view>
-  <view class="generate" bindtap="createRecipe">Turn on Cooking Assistant</view>
+  <view class="box">
+  <view class="generate" bindtap="createRecipe">Cooking Assistant</view>
+  <view class="generate" bindtap="goToForm">Add new item</view>
+</view>
 </view>
 <view class="body">
   <view class="card-food" wx:key='index' wx:for="{{foods}}" wx:for-item="food">

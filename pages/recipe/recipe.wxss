@@ -59,4 +59,23 @@ page {
 .btn-save-recipe {
   background-color: #F88B26;
   margin: 0 0 40rpx 0;
+  color: rgb(241, 241, 241);
+  border: solid 4rpx #f8983e;
+  box-shadow: 0 0 8rpx rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.btn-to-home {
+  margin-left: auto;
+  margin-right: 15px;
+  margin-bottom: -25px;
+  font-size: 15px;
+  padding: 10px;
+  width: 230rpx;
+  border: solid 4rpx #f8983e;
+  box-shadow: 0 0 8rpx rgba(0,0,0,0.3);
+  border-radius: 10rpx;
+  color: rgb(241, 241, 241);
+  background-color: #F88B26;
+  text-align: center;
 }
