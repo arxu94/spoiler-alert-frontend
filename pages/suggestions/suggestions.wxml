@@ -1,7 +1,7 @@
 <!--pages/suggestions/suggestions.wxml-->
 
 <view class="h1">Now it's time to choose your recipe!</view>
-<scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;height:65vh" bindscroll="getSelectItem">
+<scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;height:60%" bindscroll="getSelectItem">
   <block wx:for="{{recipes}}"  wx:key="unique" wx:for-index="id" wx:for-item="item">
     <view class="scroll_item {{item.selected ? 'selected' : ''}}"  bindtap="goToRecipe" data-id="{{item.id}}">
       <view class='proImg'><image src="{{item.image}}" class="slide-image"  mode="aspectFill"/>

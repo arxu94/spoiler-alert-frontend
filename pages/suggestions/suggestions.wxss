@@ -12,13 +12,12 @@ page {
   width: 100%;
   text-align: center;
   white-space: nowrap;
-  height: 80vh;
+  height: 100%;
 }
 
 .scroll_item {
 position: relative;
 width: 84%;
-margin: 0 1%;
 left: -2%;
 display: inline-block;
 border-radius: 20rpx !important ;
@@ -50,6 +49,7 @@ background-color: #fff;
 }
 
 .scroll_item .proImg{
+  height: 70%;
   /* border-top-left-radius: 20rpx;
   border-top-right-radius: 20rpx;
   width: 100%;
@@ -61,8 +61,8 @@ background-color: #fff;
 }
 
 .scroll_item image {
-  height: 50vh;
-  float: left;
+  height: 100%;
+  width: 99%;
   border-top-left-radius: 20rpx;
   border-top-right-radius: 20rpx;
 }
@@ -105,10 +105,10 @@ background-color: #fff;
 .h1 {
 color: #333;
 text-align: center;
-margin-top: 10px;
+margin: 10px 30px 0;
 font-size: 20px;
 font-weight: bold;
-width: 95%;
+width: 84vw;
 }
 
 .ingredients-list {

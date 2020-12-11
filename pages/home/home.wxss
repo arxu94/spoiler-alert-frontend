@@ -25,6 +25,7 @@ page {
   text-shadow: 1rpx 1rpx 5rpx rgba(0,0,0,0.2);
   color: #ffffff;
   margin-bottom: 25rpx;
+  margin-top: 50rpx;
 }
 
 .banner {
@@ -49,13 +50,14 @@ page {
   background-color: #F88B26;
   color: white;
   /* height: 120px; */
-  width: 200rpx;
-  height: 200rpx;
+  width: 250rpx;
+  height: 250rpx;
   border: solid 5rpx #ED984A;
   /* box-shadow: 0 0 4rpx; */
   box-shadow: 0 0 5rpx #ED984A;
   justify-content: center;
-  font-size: 30rpx;
+  align-items: center;
+  font-size: 35rpx;
 }
 .buttons > .two {
   display: flex;
@@ -63,8 +65,8 @@ page {
   color: white;
   margin: 0 40rpx;
   font-size: 150rpx;
-  width: 200rpx;
-  height: 200rpx;
+  width: 250rpx;
+  height: 250rpx;
   justify-content: center;
   align-items: center; 
   border: solid 5rpx #ED984A;
@@ -75,20 +77,28 @@ page {
   background-color: #F88B26;
   color: white;
   /* height: 120px; */
-  width: 200rpx;
-  height: 200rpx;
+  width: 250rpx;
+  height: 250rpx;
   border: solid 5rpx #ED984A;
   /* box-shadow: 0 0 4rpx; */
   box-shadow: 0 0 5rpx #ED984A;
   justify-content: center;
-  font-size: 30rpx;
+  align-items: center;
+  font-size: 35rpx;
 }
 
 .tip-title {
   font-weight: bolder;
-
+  text-align: center;
 }
 
 .tip {
   margin-top: 12rpx;
+  margin-top: 10rpx;
+  text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
+  font-size: 40rpx;
+  color: white;
+  /* font-weight: bold; */
+  margin-bottom: 25rpx;
+  text-align: center;
 }

@@ -64,6 +64,7 @@ page {
   height: 220rpx;
   flex: 0 1 300rpx;
   margin: 10rpx;
+  width: 30vw;
 }
 .btn-delete {
   /* margin: 20rpx 0 0 300rpx; */
