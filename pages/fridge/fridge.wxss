@@ -9,11 +9,8 @@ page {
 .h1 {
   /* padding: 0 32rpx; */
   width: 100%;
-  height: 120rpx;
   text-align: center;
-  margin: 20px;
-  margin-top: 8px;
-  margin-bottom: 0;
+  margin: 16rpx 0;
   font-weight: bold;
   font-size: 23px;
   text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
@@ -44,9 +41,7 @@ page {
   filter: brightness(80%);
 }
 
-.header > .h1 {
-  margin-left: 60rpx;
-}
+
 
 .header {
   display: flex;
@@ -83,16 +78,26 @@ page {
   overflow: hidden;
   height: 80px;
   background:#FFFFFF;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 5px;
-  padding-left: 8px;
+  padding: 16rpx;
+  /* padding-left: 8px;
   padding-right: 5px;
   padding-bottom: 3px;
-  padding-top: 2px;
-  margin-bottom: 10px;
+  padding-top: 2px; */
+  margin: 32rpx 0;
+}
+
+.card-expired {
+  border: 1px solid red;
+}
+
+.card-warn {
+  border: 1px solid orange;
+  /* filter: brightness(85%); */
 }
 
 .food-info {
@@ -127,21 +132,31 @@ page {
 }
 
 .generate {
-  width: 242rpx;
+  width: 45%;
+  height: 88rpx;
   /* margin-top: 30rpx;
   margin-bottom: 80rpx; */
-  background-color: #F88B26;
-  color: rgb(241, 241, 241);
   text-align: center;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: solid 4rpx #f8983e;
+  /* border: solid 4rpx #f8983e; */
   box-shadow: 0 0 8rpx rgba(0,0,0,0.3);
   border-radius: 10rpx;
   /* margin-bottom: 5px; */
   font-size: 15px;
   margin: 0 30rpx;
+  font-weight: bolder;
+}
+
+.btn-orange {
+  background-color: #F88B26;
+  color: rgb(241, 241, 241);
+}
+
+.btn-ghost {
+  background-color: #fdfdfd;
+  color: #f8983e;
 }
 
 .delete-icon {
@@ -161,4 +176,5 @@ page {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  padding: 32rpx 0;
 }

@@ -1,20 +1,15 @@
 <!--pages/home/home.wxml-->
 <!-- <text>pages/home/home.wxml</text> -->
+<view class="h1">Spoiler Alert.</view> 
+<view class="h2" style="margin-bottom: 160rpx">Minimize your food waste by keeping track of your foods and when they are about to spoil.</view>
 
+<!-- <view class="banner">
+  
+</view> -->
 
-<view class="banner">
-  <view class="headers">
-  <view class="h1"> Welcome to Spoiler Alert.</view> 
-  <view class="h2"> Minimize your food waste by keeping track of your foods and when they are about to spoil.</view>
-</view>
+<button class="btn-one" bindtap="goToFridge">See all my foods</button>
+<button class="btn-one" bindtap="goToRecipes">My saved recipes</button>
 
-<view class="buttons">
-  <button class="one" style="padding: 30rpx;" bindtap="goToFridge">See all my foods</button>
-  <!-- <button class="two" style="padding: 30rpx;" bindtap="goToForm">+</button> -->
-  <button class="three" style="padding: 30rpx;" bindtap="goToRecipes">My saved recipes</button>
-</view>
-
-<view class="h2 tip-title">Did you know?</view>
+<view class="h2 tip-title" style="margin-top: 160rpx">Did you know?</view>
 <view wx:for-item="tips" class="tip">{{tips.message || tips}}</view>
-</view>
       <!-- <button class="one" style="padding: 60rpx;" bindtap="goToTips">My personalized tips</button> -->
