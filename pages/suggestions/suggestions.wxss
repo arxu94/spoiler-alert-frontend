@@ -117,7 +117,7 @@ width: 84vw;
   /* background-color: rgba(196, 196, 196, 0.1); */
   border-radius: 2px;
   position: absolute;
-  top: 80vh;
+  top: 72vh;
 }
 
 .selected-ingredients {
