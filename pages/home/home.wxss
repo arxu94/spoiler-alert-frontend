@@ -8,6 +8,13 @@ page {
   box-sizing: border-box;
 }
 
+.tips-box {
+  margin: 160rpx 20rpx;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  padding: 30rpx;
+}
 .h1 {
   text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.2);
   font-size: 72rpx;
@@ -37,6 +44,7 @@ page {
   /* margin-top: 100rpx; */
   margin: 100rpx 70rpx;
   display: flex;
+
   justify-content: space-between;
 }
 
@@ -60,6 +68,7 @@ page {
 .tip-title {
   font-weight: bolder;
   text-align: center;
+  font-size: 40rpx;
 }
 
 .tip {
@@ -71,4 +80,5 @@ page {
   /* font-weight: bold; */
   margin-bottom: 25rpx;
   text-align: center;
+  font-weight: lighter;
 }
